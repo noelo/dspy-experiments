@@ -1,0 +1,117 @@
+{
+  "react.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "What is the date 2 months after the director of film War Italian Style 's birthday?",
+        "trajectory": [
+          {
+            "reasoning": "To find the date 2 months after the director of the film \"War Italian Style's\" birthday, I first need to identify the director of the film. The film's title suggests it is related to Italian cinema, so I will use the `enhanced_film_info_retriever` function to retrieve the director's name. Once I have the director's name, I can use the `sports_figure_info_retriever` function to obtain the director's date of birth. Finally, I will calculate the date 2 months after the director's birthday.",
+            "selected_fn": "enhanced_film_info_retriever",
+            "args": {
+              "film_titles": [
+                "War Italian Style"
+              ],
+              "info_types": [
+                "director"
+              ],
+              "output_format": "json",
+              "include_synopsis": false
+            },
+            "return_value": {
+              "War Italian Style": {
+                "director": "Luigi Scattini"
+              }
+            },
+            "errors": null
+          },
+          {
+            "reasoning": "I have identified that the director of the film \"War Italian Style\" is Luigi Scattini from the previous function call. To find the date 2 months after his birthday, I need to retrieve Luigi Scattini's date of birth using the `sports_figure_info_retriever` function. Once I have the date of birth, I can calculate the date that is 2 months after his birthday.",
+            "selected_fn": "sports_figure_info_retriever",
+            "args": {
+              "name": "Luigi Scattini",
+              "information_type": "date_of_birth",
+              "output_format": "json"
+            },
+            "return_value": {
+              "name": "Luigi Scattini",
+              "information_type": "date_of_birth",
+              "result": "17 May 1927"
+            },
+            "errors": null
+          },
+          {
+            "reasoning": "I have determined that Luigi Scattini, the director of \"War Italian Style,\" was born on 17 May 1927. To find the date 2 months after his birthday, I need to add 2 months to 17 May 1927, resulting in 17 July 1927. Therefore, the final answer is 1927-07-17.",
+            "selected_fn": "finish",
+            "args": {
+              "answer": "1927-07-17"
+            },
+            "return_value": "1927-07-17",
+            "errors": null
+          }
+        ],
+        "functions": {
+          "enhanced_film_info_retriever": {
+            "function_name": "enhanced_film_info_retriever",
+            "arguments": "(film_titles, info_types, output_format='json', include_synopsis=False)",
+            "docstring": "No docstring."
+          },
+          "sports_figure_info_retriever": {
+            "function_name": "sports_figure_info_retriever",
+            "arguments": "(name: str, information_type: str, name_variants: list = None, output_format: str = 'json', sport_type: str = None, search_filters: dict = None)",
+            "docstring": "Retrieve detailed information about a sports figure based on the specified parameters.\n\n:param name: The full name of the sports figure.\n:param information_type: The type of information requested (e.g., 'date_of_birth').\n:param name_variants: Possible variants or spellings of the sports figure's name.\n:param output_format: The format of the output (default is 'json').\n:param sport_type: The type of sport the figure is associated with.\n:param search_filters: Additional filters to refine the search results.\n:return: The requested information in the specified format."
+          },
+          "finish": {
+            "function_name": "finish",
+            "arguments": "(answer: str)",
+            "docstring": "Conclude the trajectory and return the final answer."
+          }
+        },
+        "reasoning": "I have determined that Luigi Scattini, the director of \"War Italian Style,\" was born on 17 May 1927. To find the date 2 months after his birthday, I need to add 2 months to 17 May 1927, resulting in 17 July 1927. Therefore, the final answer is 1927-07-17.",
+        "next_selected_fn": "finish",
+        "args": {
+          "answer": "1927-07-17"
+        }
+      }
+    ],
+    "signature": {
+      "instructions": "For the final answer, produce short (not full sentence) answers in which you format dates as YYYY-MM-DD, names as Firstname Lastname, and numbers without leading 0s.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Trajectory:",
+          "description": "${trajectory}"
+        },
+        {
+          "prefix": "Functions:",
+          "description": "${functions}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Next Selected Fn:",
+          "description": "${next_selected_fn}"
+        },
+        {
+          "prefix": "Args:",
+          "description": "${args}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.24",
+      "cloudpickle": "3.1"
+    }
+  }
+}
