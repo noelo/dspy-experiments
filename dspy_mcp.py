@@ -1,20 +1,12 @@
 from unittest import TextTestRunner
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
 import dspy
 import logging
 from dspy.utils.logging_utils import DSPyLoggingStream
 import sys
 import os
 from dotenv import load_dotenv
-
-# Create server parameters for stdio connection
-server_params = StdioServerParameters(
-    command="python",  # Executable
-    args=["mcp_server.py"],  # Optional command line arguments
-    env=None,  # Optional environment variables
-)
-
+from fastmcp import Client
+import asyncio
 
 class DSPyAirlineCustomerService(dspy.Signature):
     """You are an airline customer service agent. You are given a list of tools to handle user requests.
@@ -27,21 +19,20 @@ class DSPyAirlineCustomerService(dspy.Signature):
             "e.g., the confirmation_number if it's a flight booking request."
         )
     )
+    
+# dspy.enable_logging()
+# dspy.enable_litellm_logging()
 
 
-dspy.enable_logging()
-dspy.enable_litellm_logging()
-
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
-logging.getLogger("dspy").setLevel(logging.DEBUG)
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.DEBUG)
+# logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
+# logging.getLogger("dspy").setLevel(logging.DEBUG)
 
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
-handler.setLevel(logging.DEBUG)
+handler.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 root.addHandler(handler)
@@ -50,6 +41,7 @@ LLM_URL=os.getenv('LLM_URL')
 API_KEY=os.getenv('API_KEY')
 LLM_MODEL=os.getenv('LLM_MODEL')
 dspy.enable_logging()
+
 lm = dspy.LM(LLM_MODEL,
              api_base=LLM_URL,  # ensure this points to your port
              api_key=API_KEY, model_type='chat')
@@ -87,28 +79,25 @@ dspy.configure(lm=lm)
 
 
 async def run(user_request):
-    async with stdio_client(server_params) as (read, write):
-        async with ClientSession(read, write) as session:
-            # Initialize the connection
-            await session.initialize()
-            # List available tools
-            tools = await session.list_tools()
+    client = Client("http://localhost:9000/mcp")
+    async with client:
+        tools = await client.list_tools()
 
-            # Convert MCP tools to DSPy tools
-            dspy_tools = []
-            for tool in tools.tools:
-                dspy_tools.append(dspy.Tool.from_mcp_tool(session, tool))
+        # Convert MCP tools to DSPy tools
+        dspy_tools = []
+        for tool in tools:
+            dspy_tools.append(dspy.Tool.from_mcp_tool(client.session, tool))
 
-            # Create the agent
-            react = dspy.ReAct(DSPyAirlineCustomerService, tools=dspy_tools)
+        # Create the agent
+        react = dspy.ReAct(DSPyAirlineCustomerService, tools=dspy_tools)
 
-            result = await react.acall(user_request=user_request)
-            print(result)
-            dspy.inspect_history(n=50)
-            dspy
+        result = await react.acall(user_request=user_request)
+        print(result)
+        dspy.inspect_history(n=50)
+        dspy
 
 
 if __name__ == "__main__":
-    import asyncio
+    
 
     asyncio.run(run("please help me book a flight from SFO to JFK on 09/01/2025, my name is Adam"))

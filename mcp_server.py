@@ -1,7 +1,6 @@
 import random
 import string
-import mcp
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from pydantic import BaseModel
 
 # Create an MCP server
@@ -170,4 +169,4 @@ def file_ticket(user_request: str, user_profile: UserProfile):
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="http", host="127.0.0.1", port=9000)
