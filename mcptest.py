@@ -6,16 +6,12 @@ import asyncio
 
 from dotenv import load_dotenv
 from fastmcp import Client
-from fastmcp.client.transports import SSETransport
 from fastmcp.client.logging import LogMessage
 from fastmcp.client.transports import StreamableHttpTransport
-from llama_stack_client import LlamaStackClient, Agent, AgentEventLogger
+from llama_stack_client import LlamaStackClient
 
 
 load_dotenv()
-LLM_URL = os.getenv("LLM_URL")
-API_KEY = os.getenv("API_KEY")
-LLM_MODEL = os.getenv("LLM_MODEL")
 LLAMA_STACK_URL = os.getenv("LLAMA_STACK_URL")
 
 
@@ -47,8 +43,8 @@ async def log_handler(message: LogMessage):
 
 
 def lls_get_tools():
-    mcp_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
-    tool_group = mcp_client.toolgroups.list()
+    lls_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
+    tool_group = lls_client.toolgroups.list()
 
     mcp_tools = [
         tool for tool in tool_group if tool.provider_id == "model-context-protocol"
@@ -88,15 +84,23 @@ async def dspy_mcp(user_request: str):
     dspy.inspect_history(n=50)
 
 
-if __name__ == "__main__":
-    dspy.enable_logging()
-    lm = dspy.LM(
-        LLM_MODEL,
-        api_base=LLM_URL,  # ensure this points to your port
-        api_key=API_KEY,
+def lls_get_inference_server():
+    lls_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
+    model_list = lls_client.models.list()
+    print(model_list)
+    llm = dspy.LM(
+        "openai/" + model_list[0].identifier,
+        api_base=LLAMA_STACK_URL + "/v1/openai/v1",
         model_type="chat",
     )
-    dspy.configure(lm=lm)
+    return llm
+
+
+if __name__ == "__main__":
+    dspy.enable_logging()
+    llm = lls_get_inference_server()
+
+    dspy.configure(lm=llm)
     asyncio.run(
         dspy_mcp(
             "help me find the recipe for cupcakes? I've already done a basic search and that didn't work. I also tried an advanced search and that didn't give great results"
