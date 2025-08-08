@@ -26,6 +26,7 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root.addHandler(handler)
 
+
 class CustomerAssistantService(dspy.Signature):
     """You are a helpful customer service agent. You are given a list of tools to handle user requests.
     You should decide the right tool to use in order to fulfill users' requests."""
@@ -36,6 +37,7 @@ class CustomerAssistantService(dspy.Signature):
             "Message that summarizes the process result, and the information users need, "
         )
     )
+
 
 async def log_handler(message: LogMessage):
     level = message.level.upper()
@@ -54,68 +56,36 @@ def lls_get_tools():
 
     tool_list = {}
     for tool in mcp_tools:
-        # transport = StreamableHttpTransport(url=tool.mcp_endpoint.uri)
-        # tool_list[tool.identifier] = Client(StreamableHttpTransport(url=tool.mcp_endpoint.uri), log_handler=log_handler)
-        tool_list[tool.identifier] = tool.mcp_endpoint.uri   
+        tool_list[tool.identifier] = tool.mcp_endpoint.uri
     return tool_list
 
 
-async def convert_tools_dspy()-> list[dspy.adapters.types.tool.Tool]:
-    tools_list = lls_get_tools()    
+async def convert_tools_dspy() -> list[dspy.adapters.types.tool.Tool]:
+    tools_list = lls_get_tools()
     dspy_tools = []
 
     for tool in tools_list:
         print(tools_list[tool])
-        mcp_client = Client(StreamableHttpTransport(url=tools_list[tool]),log_handler=log_handler)
+        mcp_client = Client(
+            StreamableHttpTransport(url=tools_list[tool]), log_handler=log_handler
+        )
         await mcp_client._connect()
-        print(f" Connected:{mcp_client.is_connected()} Init result:{mcp_client.initialize_result}\n")
+        print(
+            f" Connected:{mcp_client.is_connected()} Init result:{mcp_client.initialize_result}\n"
+        )
         provided_tools = await mcp_client.list_tools()
-        
+
         for method in provided_tools:
             dspy_tools.append(dspy.Tool.from_mcp_tool(mcp_client.session, method))
-            
     return dspy_tools
-          
-async def direct_mcp(user_request):    
-    ls_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
-    tool_group = ls_client.toolgroups.list()
 
-    mcp_tools = [
-        tool for tool in tool_group if tool.provider_id == "model-context-protocol"
-    ]
-    transport = StreamableHttpTransport(
-        url=mcp_tools[0].mcp_endpoint.uri
-    )
-    
-    mcp_client = Client(transport,log_handler=log_handler)
-    async with mcp_client:
-        tools = await mcp_client.list_tools()
-        dspy_tools = []
-        for tool in tools:
-            dspy_tools.append(dspy.Tool.from_mcp_tool(mcp_client.session, tool))
 
-        # Create the agent
-        react = dspy.ReAct(CustomerAssistantService, tools=dspy_tools)
-        result = await react.acall(user_request=user_request)
-        print(result)
-        # dspy.inspect_history(n=50)
-        # dspy
-        
-async def dspy_interact(user_request: str):
-    dspy_tools= await(convert_tools_dspy())
-    
-    parsed_kwargs = dspy_tools[0]._validate_and_parse_args(user_request=user_request)
-    print(parsed_kwargs)
-    result = await dspy_tools[0].func(**parsed_kwargs)
-    print(result)
-    
 async def dspy_mcp(user_request: str):
-    dspy_tools= await(convert_tools_dspy())
+    dspy_tools = await convert_tools_dspy()
     react = dspy.ReAct(CustomerAssistantService, tools=dspy_tools)
     result = await react.acall(user_request=user_request)
     print(result)
     dspy.inspect_history(n=50)
-          
 
 
 if __name__ == "__main__":
@@ -127,4 +97,8 @@ if __name__ == "__main__":
         model_type="chat",
     )
     dspy.configure(lm=lm)
-    asyncio.run(dspy_mcp("help me find the recipe for cupcakes? I've already done a basic search and that didn't work"))
+    asyncio.run(
+        dspy_mcp(
+            "help me find the recipe for cupcakes? I've already done a basic search and that didn't work. I also tried an advanced search and that didn't give great results"
+        )
+    )
