@@ -100,6 +100,6 @@ async def executeCommand(user_request):
 
 
 if __name__ == "__main__":
-    asyncio.run(executeCommand("check if the garage door is opened and if it is close it"))
-    # asyncio.run(executeCommand("close the blind on the office western window"))
+    asyncio.run(executeCommand("is it raining"))
+    # asyncio.run(executeCommand("whats the average temperature in the house"))
     # asyncio.run(mcpInspect())
