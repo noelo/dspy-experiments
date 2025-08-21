@@ -1,0 +1,189 @@
+[
+  {
+    "patient_id": "P001-A23",
+    "name": "Eleanor Vance",
+    "primary_medical_condition": "Severe Liver Impairment (Cirrhosis, Child-Pugh C)",
+    "drugs_to_avoid": [
+      "Aetherium-A",
+      "Neuro-Calm",
+      "Hepato-Boost",
+      "Lipo-Clear",
+      "Myco-Clear",
+      "Panno-zyme",
+      "Vascular-Remodel",
+      "Adreno-Calm",
+      "Hepato-Clearse",
+      "Oxy-Neuro",
+      "Pancreo-Shield"
+    ]
+  },
+  {
+    "patient_id": "P002-B45",
+    "name": "Marcus Chen",
+    "primary_medical_condition": "Acute Narrow-Angle Glaucoma (recently diagnosed, prior attack)",
+    "drugs_to_avoid": [
+      "Aetherium-A",
+      "Lumino-Glow",
+      "Dendro-Shield",
+      "Uro-Flow",
+      "Vaginal-Flora",
+      "Chrono-Rhythm",
+      "Eye-Protect"
+    ]
+  },
+  {
+    "patient_id": "P003-C67",
+    "name": "Isabella Rossi",
+    "primary_medical_condition": "Active Gastrointestinal Ulceration (duodenal ulcer, confirmed by endoscopy)",
+    "drugs_to_avoid": [
+      "Biolith-X",
+      "Thrombo-Stat",
+      "Ferro-Gem",
+      "Gastro-Soothe",
+      "Hemo-Flow",
+      "Spine-Align",
+      "Gastro-Coat"
+    ]
+  },
+  {
+    "patient_id": "P004-D89",
+    "name": "David Miller",
+    "primary_medical_condition": "Uncontrolled Autoimmune Disease (Systemic Lupus Erythematosus - active flare with nephritis)",
+    "drugs_to_avoid": [
+      "Celo-Growth",
+      "Immuno-Boost",
+      "Phago-Boost",
+      "Immuno-Mod",
+      "Cyto-Shield",
+      "Dendro-Matrix",
+      "Immuno-Balance",
+      "Lympho-Stim",
+      "Myco-Boost",
+      "Panno-Immun",
+      "Pulmo-Force",
+      "Immuno-Replenish"
+    ]
+  },
+  {
+    "patient_id": "P005-E01",
+    "name": "Sofia Rodriguez",
+    "primary_medical_condition": "End-Stage Renal Disease (ESRD), not yet on dialysis",
+    "drugs_to_avoid": [
+      "Renal-Flow",
+      "Osteo-Prime",
+      "Glyco-Prime",
+      "Vitri-Clear",
+      "Nephro-Guard",
+      "Osteo-Strong",
+      "Nephro-Dialyze",
+      "Bone-Knit",
+      "Nephro-Matrix",
+      "Lipo-Rebalance",
+      "Bone-Marrow-Boost"
+    ]
+  },
+  {
+    "patient_id": "P006-F23",
+    "name": "John Davies",
+    "primary_medical_condition": "Active Malignancy (Stage IV Non-Small Cell Lung Carcinoma)",
+    "drugs_to_avoid": [
+      "Celo-Growth",
+      "Immuno-Boost",
+      "Angio-Repair",
+      "Cyto-Shield",
+      "Telo-Boost",
+      "Dendro-Matrix",
+      "Immuno-Balance",
+      "Lympho-Stim",
+      "Myco-Boost",
+      "Panno-Immun",
+      "Pulmo-Force",
+      "Telo-Gene",
+      "Adipo-Block",
+      "Cyto-Shield",
+      "Endo-Gene",
+      "Immuno-Replenish",
+      "Oligo-Gene",
+      "Panno-Immun",
+      "Soma-Repair",
+      "Telo-Protector"
+    ]
+  },
+  {
+    "patient_id": "P007-G45",
+    "name": "Anya Sharma",
+    "primary_medical_condition": "History of Severe Thrombosis (recurrent PE, factor V Leiden mutation)",
+    "drugs_to_avoid": [
+      "Thrombo-Stat",
+      "Hemo-Flow",
+      "Reticulo-Stim",
+      "Hemo-Factor",
+      "Thrombo-Solve",
+      "Hemo-Factor",
+      "Reticulo-Stim"
+    ]
+  },
+  {
+    "patient_id": "P008-H67",
+    "name": "Robert Wilson",
+    "primary_medical_condition": "Severe Cardiac Disease (Decompensated Heart Failure with LVEF 20%, frequent arrhythmias)",
+    "drugs_to_avoid": [
+      "Kineto-K",
+      "Meta-Pulse",
+      "Lympho-Clear",
+      "Thyro-Synth",
+      "Adipo-Melt",
+      "Broncho-Ease",
+      "Aqua-Balance",
+      "Myo-Charge",
+      "Vein-Restore",
+      "Vascular-Remodel",
+      "Cardio-Flex",
+      "Pulmo-Vent",
+      "Myo-Charge",
+      "Oxy-Boost",
+      "Peri-Calm",
+      "Vascular-Remodel",
+      "Adreno-Calm",
+      "Cerebro-Shield",
+      "Musculo-Force",
+      "Oxy-Neuro",
+      "Pulmo-Force",
+      "Rhino-Clear",
+      "Spiro-Sense",
+      "Uro-Detox",
+      "Vascular-Shield",
+      "Vascular-Remodel",
+      "Cardio-Flex",
+      "Spiro-Sense",
+      "Vascular-Remodel"
+    ]
+  },
+  {
+    "patient_id": "P009-I89",
+    "name": "Lena Kuznetsov",
+    "primary_medical_condition": "Severe Psychosis (Schizophrenia, currently unstable with active hallucinations)",
+    "drugs_to_avoid": [
+      "Chrono-Z",
+      "Neuro-Cogni",
+      "Neuro-Regen",
+      "Cerebro-Vibe",
+      "Glia-Flex",
+      "Neuro-Vibe",
+      "Oligo-Vibe"
+    ]
+  },
+  {
+    "patient_id": "P010-J01",
+    "name": "Chen Wei",
+    "primary_medical_condition": "Myasthenia Gravis (generalized form, stable on Pyridostigmine)",
+    "drugs_to_avoid": [
+      "Kineto-K",
+      "Myo-Tonic",
+      "Spiro-Boost",
+      "Myo-Connect",
+      "Musculo-Force",
+      "Voice-Soft"
+    ]
+  }
+]

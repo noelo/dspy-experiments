@@ -1,0 +1,583 @@
+[
+    {
+        "drug_name": "Aqua-Balance",
+        "type_classification": "Fluid & Electrolyte Homeostasis Agent",
+        "med_condition": "Chronic Dehydration, Electrolyte Imbalance (mild to moderate)",
+        "drug_interactions": "Diuretics (e.g., Furosemide): Risk of severe dehydration, electrolyte derangement.  ACE Inhibitors/ARBs: May exacerbate hypotension or hyperkalemia.",
+        "contra_indications": "Severe Edema (e.g., pulmonary edema), Congestive Heart Failure (decompensated), Severe Renal Impairment (anuric phase)."
+    },
+    {
+        "drug_name": "Cardio-Flex",
+        "type_classification": "Myocardial Elasticity Enhancer",
+        "med_condition": "Diastolic Dysfunction, Restrictive Cardiomyopathy (early stage)",
+        "drug_interactions": "Calcium Channel Blockers (e.g., Verapamil): Additive bradycardia, AV block.  Beta-Blockers (e.g., Metoprolol): Risk of profound bradycardia, heart block.",
+        "contra_indications": "Acute Myocardial Infarction, Severe Bradycardia, High-Grade AV Block (without pacemaker)."
+    },
+    {
+        "drug_name": "Hemo-Factor",
+        "type_classification": "Coagulation Factor Promoter",
+        "med_condition": "Hemophilia (mild, specific factor deficiencies), Von Willebrand Disease (Type 1)",
+        "drug_interactions": "Anticoagulants (e.g., Warfarin, Apixaban): Increased risk of thrombosis/clotting.  Antiplatelet Agents (e.g., Aspirin, Clopidogrel): Increased risk of thrombosis due to platelet activation.",
+        "contra_indications": "Active Thrombosis (e.g., DVT, PE), Disseminated Intravascular Coagulation (DIC), History of Hypercoagulable State."
+    },
+    {
+        "drug_name": "Immuno-Calm",
+        "type_classification": "T-Regulatory Cell Inducer",
+        "med_condition": "Rheumatoid Arthritis (refractory), Crohn's Disease (moderate to severe)",
+        "drug_interactions": "Other Immunosuppressants (e.g., Methotrexate, Cyclosporine): Increased risk of severe infection, profound immune suppression.  Live Vaccines: Risk of vaccine-induced infection.",
+        "contra_indications": "Active Severe Infection (bacterial, viral, fungal), Active Malignancy (unless indicated for specific cancers), Severe Immunodeficiency."
+    },
+    {
+        "drug_name": "Neuro-Synapse",
+        "type_classification": "Synaptic Plasticity Enhancer",
+        "med_condition": "Post-Concussion Syndrome (cognitive deficits), Learning Disorders (specific types)",
+        "drug_interactions": "CNS Stimulants (e.g., Amphetamines): Increased risk of excitotoxicity, seizures.  Antiepileptic Drugs: May alter seizure threshold or reduce efficacy.",
+        "contra_indications": "Active Seizure Disorder (uncontrolled), Severe Psychosis, Recent Cerebral Hemorrhage."
+    },
+    {
+        "drug_name": "Oculo-Regen",
+        "type_classification": "Retinal Photoreceptor Rejuvenator",
+        "med_condition": "Early-Stage Retinitis Pigmentosa, Stargardt Disease",
+        "drug_interactions": "Vitamin A Supplements (high dose): Risk of hypervitaminosis A.  Photosensitizing Drugs (e.g., Tetracyclines): Increased risk of retinal damage from light exposure.",
+        "contra_indications": "Severe Retinal Detachment (unrepaired), Active Ocular Infection, Severe Allergic Reaction to Ophthalmic Agents."
+    },
+    {
+        "drug_name": "Pulmo-Ease",
+        "type_classification": "Bronchial Mucus Secretion Modulator",
+        "med_condition": "Cystic Fibrosis (thick mucus), Chronic Bronchitis (excessive sputum)",
+        "drug_interactions": "Antitussives (e.g., Codeine): May lead to mucus plugging due to cough suppression.  Bronchodilators: No direct interaction, but may require dosage adjustment for optimal effect.",
+        "contra_indications": "Severe Respiratory Insufficiency (with impaired cough reflex), Acute Asthma Exacerbation (if it increases mucus load), Hemoptysis (coughing up blood)."
+    },
+    {
+        "drug_name": "Renal-Guard",
+        "type_classification": "Nephron Filtration Stabilizer",
+        "med_condition": "Diabetic Nephropathy (early-stage), Hypertension-induced Nephropathy",
+        "drug_interactions": "NSAIDs (e.g., Ibuprofen): Increased risk of acute kidney injury.  Diuretics: Exacerbated fluid and electrolyte disturbances.",
+        "contra_indications": "End-Stage Renal Disease (ESRD, on dialysis), Acute Kidney Injury (severe), Severe Dehydration."
+    },
+    {
+        "drug_name": "Soma-Repair",
+        "type_classification": "Cellular Apoptosis Inhibitor (Targeted)",
+        "med_condition": "Ischemic Stroke (acute phase, neuroprotection), Acute Spinal Cord Injury",
+        "drug_interactions": "Chemotherapy: Potential for interference with anti-cancer mechanisms.  Immunosuppressants: May reduce efficacy if immune clearance of damaged cells is necessary.",
+        "contra_indications": "Active Malignancy (unless specifically for cancer therapy), Severe Systemic Infection (if it hinders immune clearance), Uncontrolled Hemorrhage (e.g., hemorrhagic stroke)."
+    },
+    {
+        "drug_name": "Thyro-Regen",
+        "type_classification": "Thyroid Follicle Rejuvenator",
+        "med_condition": "Hashimoto's Thyroiditis (early), Subclinical Hypothyroidism",
+        "drug_interactions": "Levothyroxine (Thyroid Hormone): Risk of hyperthyroidism or altered thyroid function tests.  Amiodarone: Can induce thyroid dysfunction (both hyper and hypo).",
+        "contra_indications": "Untreated Hyperthyroidism (e.g., Graves' Disease), Acute Myocardial Infarction, Adrenal Insufficiency (untreated)."
+    },
+    {
+        "drug_name": "Vascular-Flow",
+        "type_classification": "Arterial Endothelial Restorer",
+        "med_condition": "Early Atherosclerosis, Endothelial Dysfunction",
+        "drug_interactions": "Statins: Potential for additive effects on lipid profile.  Antihypertensives: May exacerbate hypotension.",
+        "contra_indications": "Active Hemorrhage (e.g., GI bleed), Severe Hypotension, Aortic Dissection (acute)."
+    },
+    {
+        "drug_name": "Derm-Heal",
+        "type_classification": "Epidermal Growth Factor Stimulator",
+        "med_condition": "Chronic Non-Healing Ulcers, Epidermolysis Bullosa (symptomatic)",
+        "drug_interactions": "Topical Corticosteroids: May inhibit cellular proliferation.  Topical Antibiotics: No direct interaction, but should address infection first.",
+        "contra_indications": "Active Skin Infection (bacterial/fungal/viral), Skin Malignancy, Severe Allergic Dermatitis (active)."
+    },
+    {
+        "drug_name": "Gastro-Balance",
+        "type_classification": "Gut Motility Modulator",
+        "med_condition": "Irritable Bowel Syndrome (Mixed type), Functional Dyspepsia",
+        "drug_interactions": "Anticholinergics (e.g., Dicyclomine): Antagonistic effects on gut motility.  Opioids: Exacerbation of constipation or reduced motility.",
+        "contra_indications": "Gastrointestinal Obstruction, Toxic Megacolon, Severe Inflammatory Bowel Disease Flare."
+    },
+    {
+        "drug_name": "Hepato-Boost",
+        "type_classification": "Hepatocyte Regenerator",
+        "med_condition": "Cirrhosis (early decompensation), Drug-Induced Liver Injury (severe)",
+        "drug_interactions": "Other Hepatotoxic Drugs: Increased risk of liver damage.  Warfarin: Altered metabolism, increased bleeding risk.",
+        "contra_indications": "Acute Fulminant Liver Failure, Uncontrolled Variceal Bleeding, Active Alcohol Use Disorder."
+    },
+    {
+        "drug_name": "Lipo-Clear",
+        "type_classification": "Lipoprotein Lipase Activator",
+        "med_condition": "Severe Hypertriglyceridemia, Familial Chylomicronemia Syndrome",
+        "drug_interactions": "Statins: Increased risk of myopathy/rhabdomyolysis.  Fibrates: Increased risk of gallstones, myopathy.",
+        "contra_indications": "Active Gallbladder Disease, Severe Liver Impairment, Severe Muscle Disorder (e.g., rhabdomyolysis)."
+    },
+    {
+        "drug_name": "Myo-Charge",
+        "type_classification": "Mitochondrial Energy Enhancer",
+        "med_condition": "Mitochondrial Myopathy, Chronic Fatigue Syndrome (severe)",
+        "drug_interactions": "Beta-Blockers: May mask symptoms of over-stimulation.  Cardiac Glycosides (e.g., Digoxin): Potential for arrhythmias due to altered cellular energy.",
+        "contra_indications": "Uncontrolled Arrhythmias, Severe Hypertension, Acute Myocardial Infarction."
+    },
+    {
+        "drug_name": "Neuro-Cogni",
+        "type_classification": "Dopaminergic Pathway Optimizer",
+        "med_condition": "Parkinson's Disease (motor fluctuations), Restless Legs Syndrome",
+        "drug_interactions": "Antipsychotics (Dopamine receptor blockers): Reduced efficacy, exacerbated Parkinsonian symptoms.  MAOIs: Risk of hypertensive crisis, serotonin syndrome.",
+        "contra_indications": "Severe Psychosis, Uncontrolled Hypertension, History of Malignant Hyperthermia."
+    },
+    {
+        "drug_name": "Osteo-Strong",
+        "type_classification": "Bone Collagen Cross-Linker",
+        "med_condition": "Osteoporosis (severe fragility fractures), Osteogenesis Imperfecta",
+        "drug_interactions": "Bisphosphonates: May interfere with bone remodeling cycle.  High-dose Calcium/Vitamin D: Risk of hypercalcemia.",
+        "contra_indications": "Hypercalcemia, Osteosarcoma, Severe Renal Impairment (risk of ectopic calcification)."
+    },
+    {
+        "drug_name": "Phono-Clear",
+        "type_classification": "Eustachian Tube Patency Enhancer",
+        "med_condition": "Chronic Otitis Media with Effusion ('glue ear'), Barotrauma (persistent)",
+        "drug_interactions": "Systemic Decongestants (e.g., Pseudoephedrine): Increased systemic side effects (hypertension, tachycardia).  Antihistamines: Drying effect, may worsen Eustachian tube dysfunction.",
+        "contra_indications": "Acute Otitis Media (untreated), Perforated Eardrum, Severe Allergic Reaction to Nasal Sprays."
+    },
+    {
+        "drug_name": "Spiro-Boost",
+        "type_classification": "Diaphragmatic Muscle Strengthener",
+        "med_condition": "Diaphragmatic Paralysis (partial), Respiratory Muscle Weakness (e.g., ALS)",
+        "drug_interactions": "Muscle Relaxants: Increased respiratory depression.  Opioids: Increased respiratory depression.",
+        "contra_indications": "Acute Respiratory Failure, Severe COPD with Hypercapnic Respiratory Failure, Myasthenia Gravis (unless specifically indicated)."
+    },
+    {
+        "drug_name": "Thrombo-Solve",
+        "type_classification": "Fibrinolysis Pathway Activator",
+        "med_condition": "Acute Ischemic Stroke (within window), Acute Myocardial Infarction",
+        "drug_interactions": "Anticoagulants: Extremely high risk of severe hemorrhage.  Antiplatelet Agents (e.g., Aspirin): High risk of severe hemorrhage.",
+        "contra_indications": "Active Internal Bleeding, Recent Hemorrhagic Stroke, Uncontrolled Severe Hypertension, Aortic Dissection."
+    },
+    {
+        "drug_name": "Uro-Repair",
+        "type_classification": "Bladder Sphincter Tone Modulator",
+        "med_condition": "Stress Urinary Incontinence, Post-Prostatectomy Incontinence",
+        "drug_interactions": "Alpha-Adrenergic Blockers (e.g., Tamsulosin): Increased risk of hypotension, urinary retention.  Tricyclic Antidepressants: Additive anticholinergic effects.",
+        "contra_indications": "Urinary Retention (severe), Narrow-Angle Glaucoma, Severe Cardiovascular Disease."
+    },
+    {
+        "drug_name": "Vagino-Fortify",
+        "type_classification": "Vaginal Epithelial Thickener",
+        "med_condition": "Vaginal Atrophy (post-menopausal), Recurrent Vaginal Lacerations",
+        "drug_interactions": "Systemic Estrogen Therapy: Increased risk of estrogen-related side effects.  Vaginal Antifungals: May alter absorption or efficacy.",
+        "contra_indications": "Undiagnosed Abnormal Genital Bleeding, Breast Cancer (estrogen-sensitive), Active Vaginal Infection (untreated)."
+    },
+    {
+        "drug_name": "Articulo-Heal",
+        "type_classification": "Chondrocyte Proliferation Factor",
+        "med_condition": "Cartilage Defects (localized), Early Osteoarthritis",
+        "drug_interactions": "Intra-articular Corticosteroids: May inhibit cellular repair.  NSAIDs: Can suppress local inflammation needed for repair.",
+        "contra_indications": "Active Joint Infection, Severe Joint Deformity (non-repairable), Active Malignancy."
+    },
+    {
+        "drug_name": "Bone-Marrow-Boost",
+        "type_classification": "Hematopoietic Stem Cell Stimulator",
+        "med_condition": "Aplastic Anemia (severe), Chemotherapy-Induced Myelosuppression",
+        "drug_interactions": "Immunosuppressants: May reduce efficacy.  Chemotherapy: Timing critical to avoid antagonism.",
+        "contra_indications": "Acute Myeloid Leukemia (AML), Myelodysplastic Syndrome (high-risk), Active Severe Infection (uncontrolled)."
+    },
+    {
+        "drug_name": "Cerebro-Vibe",
+        "type_classification": "Cerebral Glymphatic Flow Enhancer",
+        "med_condition": "Chronic Traumatic Encephalopathy (CTE) early stage, Post-Stroke Brain Edema (resolution)",
+        "drug_interactions": "Osmotic Diuretics: Risk of severe dehydration, electrolyte imbalance.  Corticosteroids: Complex effects on cerebral fluid dynamics.",
+        "contra_indications": "Active Cerebral Hemorrhage, Severe Intracranial Hypertension (uncontrolled), Severe Dehydration."
+    },
+    {
+        "drug_name": "Dento-Strong",
+        "type_classification": "Enamel Matrix Protein Analog",
+        "med_condition": "Severe Dental Erosion, Amelogenesis Imperfecta (mild)",
+        "drug_interactions": "High-Fluoride Treatments: May interfere with enamel remineralization process.  Acidic Foods/Drinks (excessive): Reduced efficacy.",
+        "contra_indications": "Active Dental Caries (untreated), Severe Periodontal Disease, Known Allergy to Enamel Proteins."
+    },
+    {
+        "drug_name": "Endo-Repair",
+        "type_classification": "Endocrine Cell Regenerator",
+        "med_condition": "Type 1 Diabetes (early onset, preserving beta cells), Hypoparathyroidism (refractory)",
+        "drug_interactions": "Immunosuppressants: May inhibit cell regeneration.  Insulin/Oral Hypoglycemics: Risk of hypoglycemia.",
+        "contra_indications": "Active Endocrine Tumor (hormone-secreting), Severe Hypoglycemia (uncontrolled), Uncontrolled Diabetes Mellitus."
+    },
+    {
+        "drug_name": "Gastro-Coat",
+        "type_classification": "Intestinal Mucosal Barrier Fortifier",
+        "med_condition": "Leaky Gut Syndrome, Irritable Bowel Syndrome (with barrier dysfunction)",
+        "drug_interactions": "NSAIDs: May disrupt barrier function.  PPIs: Altered gut microbiome.",
+        "contra_indications": "Gastrointestinal Obstruction, Severe Active Inflammatory Bowel Disease (toxic megacolon), Severe Food Allergies."
+    },
+    {
+        "drug_name": "Hemo-Filter",
+        "type_classification": "Erythrocyte Deformability Enhancer",
+        "med_condition": "Sickle Cell Anemia (to improve blood flow), Peripheral Arterial Disease (microcirculation)",
+        "drug_interactions": "Anticoagulants: Increased bleeding risk in microvasculature.  Antiplatelet Agents: Increased bleeding risk.",
+        "contra_indications": "Acute Hemorrhage (e.g., cerebral hemorrhage), Severe Thrombocytopenia, DIC."
+    },
+    {
+        "drug_name": "Immuno-Balance",
+        "type_classification": "Cytokine Release Modulator",
+        "med_condition": "Cytokine Storm Syndrome, Severe Allergic Reactions (anaphylaxis - adjunct)",
+        "drug_interactions": "Corticosteroids (high dose): Increased risk of severe immunosuppression.  Other Immunomodulators: Complex and unpredictable immune effects.",
+        "contra_indications": "Active Severe Infection (uncontrolled), Severe Immunodeficiency, Active Malignancy."
+    },
+    {
+        "drug_name": "Lympho-Stim",
+        "type_classification": "Lymphocyte Proliferation Factor",
+        "med_condition": "Chronic Lymphopenia, Severe Immunodeficiency (e.g., post-chemotherapy)",
+        "drug_interactions": "Immunosuppressants: Direct antagonism.  Live Vaccines: Increased risk of vaccine-induced infection.",
+        "contra_indications": "Active Malignancy (lymphoid cancers), Autoimmune Diseases (active flare), Organ Transplant Recipients."
+    },
+    {
+        "drug_name": "Myco-Boost",
+        "type_classification": "Immune Fungal Response Enhancer",
+        "med_condition": "Chronic Candidiasis (recurrent), Aspergillosis (immunocompromised)",
+        "drug_interactions": "Broad-Spectrum Antifungals: May interfere with immune mechanism.  Immunosuppressants: Reduced efficacy.",
+        "contra_indications": "Autoimmune Diseases, Severe Allergic Reactions to Fungi (e.g., allergic bronchopulmonary aspergillosis), Active Systemic Infection (bacterial/viral)."
+    },
+    {
+        "drug_name": "Nephro-Matrix",
+        "type_classification": "Renal Interstitial Regenerator",
+        "med_condition": "Chronic Kidney Disease (fibrosis), Alport Syndrome (slowing progression)",
+        "drug_interactions": "NSAIDs: Increased risk of kidney injury.  ACE Inhibitors/ARBs: May exacerbate hyperkalemia or hypotension.",
+        "contra_indications": "End-Stage Renal Disease (ESRD), Acute Kidney Injury (anuric), Severe Hyperkalemia."
+    },
+    {
+        "drug_name": "Neuro-Vibe",
+        "type_classification": "Neurotransmitter Receptor Balance Agent",
+        "med_condition": "Generalized Anxiety Disorder (refractory), Chronic Migraine (preventative)",
+        "drug_interactions": "SSRIs/SNRIs: Risk of serotonin syndrome.  Benzodiazepines: Increased sedation, respiratory depression.",
+        "contra_indications": "Severe Depression (with suicidal ideation), Active Seizure Disorder, Severe Liver Impairment."
+    },
+    {
+        "drug_name": "Oligo-Vibe",
+        "type_classification": "Oligodendrocyte Myelin Production Stimulator",
+        "med_condition": "Multiple Sclerosis (relapsing-remitting, for repair), Transverse Myelitis",
+        "drug_interactions": "Immunosuppressants: May inhibit remyelination.  Corticosteroids: Complex effects on CNS cells and myelin.",
+        "contra_indications": "Active Brain Tumor, Severe CNS Infection, History of Primary Progressive MS (refractory)."
+    },
+    {
+        "drug_name": "Oxy-Flow",
+        "type_classification": "Tissue Oxygen Delivery Enhancer",
+        "med_condition": "Critical Limb Ischemia, Chronic Wound Healing (hypoxic wounds)",
+        "drug_interactions": "Vasodilators (e.g., Nitrates): Exacerbated hypotension.  Anticoagulants: Increased bleeding risk in ischemic tissues.",
+        "contra_indications": "Acute Hemorrhage, Severe Hypotension, Uncontrolled Hypertension."
+    },
+    {
+        "drug_name": "Panno-Cure",
+        "type_classification": "Pancreatic Islet Cell Anti-Inflammatory",
+        "med_condition": "Pancreatitis (chronic, to reduce inflammation), Type 1 Diabetes (autoimmune component)",
+        "drug_interactions": "Corticosteroids: Additive immunosuppression, increased risk of infection.  Other Anti-inflammatories: Increased risk of gastrointestinal side effects.",
+        "contra_indications": "Active Pancreatitis (acute flare), Pancreatic Cancer (unresectable), Severe Immunodeficiency."
+    },
+    {
+        "drug_name": "Peri-Calm",
+        "type_classification": "Pericardial Inflammation Suppressor",
+        "med_condition": "Pericarditis (recurrent), Post-Myocardial Infarction Pericarditis",
+        "drug_interactions": "NSAIDs: Increased risk of gastrointestinal bleeding.  Corticosteroids: Additive immunosuppression, increased side effects.",
+        "contra_indications": "Active Bacterial Pericarditis, Severe Coagulopathy, Recent Cardiac Surgery (risk of tamponade)."
+    },
+    {
+        "drug_name": "Spina-Flex",
+        "type_classification": "Intervertebral Disc Nucleus Regenerator",
+        "med_condition": "Degenerative Disc Disease (early to moderate), Disc Herniation (non-surgical)",
+        "drug_interactions": "NSAIDs (long-term): May inhibit healing.  Oral Steroids: Impaired connective tissue repair.",
+        "contra_indications": "Acute Spinal Cord Compression, Cauda Equina Syndrome, Active Spinal Infection."
+    },
+    {
+        "drug_name": "Telo-Gene",
+        "type_classification": "Telomere Length Stabilizer",
+        "med_condition": "Dyskeratosis Congenita, Aplastic Anemia (telomeropathy-related)",
+        "drug_interactions": "Chemotherapy: Potential for accelerated cell growth in cancer.  Immunosuppressants: Reduced immune surveillance.",
+        "contra_indications": "Active Malignancy, Severe Autoimmune Disease (active flare), Severe Proliferative Disorders."
+    },
+    {
+        "drug_name": "Utero-Guard",
+        "type_classification": "Uterine Endometrial Stabilizer",
+        "med_condition": "Recurrent Miscarriage (uterine factor), Endometrial Hyperplasia (non-atypical)",
+        "drug_interactions": "Oral Contraceptives: Altered hormonal balance.  Anticoagulants: Increased risk of abnormal uterine bleeding.",
+        "contra_indications": "Undiagnosed Abnormal Genital Bleeding, Endometrial Cancer, Active Thrombotic Disorders."
+    },
+    {
+        "drug_name": "Vein-Restore",
+        "type_classification": "Venous Wall Fortifier",
+        "med_condition": "Chronic Venous Insufficiency (CVI), Varicose Veins (preventative)",
+        "drug_interactions": "Diuretics: May mask underlying venous stasis.  Anticoagulants: Increased bleeding risk.",
+        "contra_indications": "Acute Deep Vein Thrombosis (DVT), Severe Arterial Insufficiency, Active Leg Ulcer (unmanaged)."
+    },
+    {
+        "drug_name": "Voice-Synth",
+        "type_classification": "Vocal Cord Connective Tissue Regenerator",
+        "med_condition": "Vocal Fold Scarring, Chronic Dysphonia (structural)",
+        "drug_interactions": "Corticosteroids (local injection): Tendon/ligament weakening.  NSAIDs: May inhibit healing.",
+        "contra_indications": "Acute Laryngitis (active infection), Vocal Cord Malignancy, Recent Vocal Cord Surgery (early healing phase)."
+    },
+    {
+        "drug_name": "Adipo-Block",
+        "type_classification": "Adipocyte Differentiation Inhibitor",
+        "med_condition": "Liposarcoma (adjunctive), Lymphedema (fibrosis component)",
+        "drug_interactions": "Chemotherapy: Potential for altered efficacy.  Corticosteroids: Complex effects on adipose tissue.",
+        "contra_indications": "Cachexia/Severe Malnutrition, Active Cancer (unless specific indication), Pregnancy."
+    },
+    {
+        "drug_name": "Chrono-Rhythm",
+        "type_classification": "Circadian Rhythm Entrainment Agent",
+        "med_condition": "Shift Work Sleep Disorder, Delayed Sleep Phase Syndrome",
+        "drug_interactions": "Sedatives: Increased drowsiness.  Alcohol: Potentiates sedative effects.",
+        "contra_indications": "Severe Liver Impairment, Acute Narrow-Angle Glaucoma, Heavy Machinery Operation."
+    },
+    {
+        "drug_name": "Cyto-Shield",
+        "type_classification": "Cellular Apoptosis Modulator (Selective)",
+        "med_condition": "Ischemic-Reperfusion Injury (organ transplant), Neurodegenerative Diseases (early)",
+        "drug_interactions": "Chemotherapy: Potential for anti-cancer interference.  Immunosuppressants: May reduce efficacy.",
+        "contra_indications": "Active Malignancy (unless indicated for specific cancers), Severe Infection (if it hinders immune clearance), Pregnancy."
+    },
+    {
+        "drug_name": "Dermato-Shield",
+        "type_classification": "Skin Barrier Lipid Rebuilder",
+        "med_condition": "Atopic Dermatitis (severe barrier dysfunction), Ichthyosis",
+        "drug_interactions": "Topical Corticosteroids (long-term high potency): Skin thinning.  Systemic Retinoids: Increased skin dryness.",
+        "contra_indications": "Active Skin Infection (bacterial/fungal/viral), Severe Allergic Contact Dermatitis, Large Area of Broken Skin."
+    },
+    {
+        "drug_name": "Glia-Flex",
+        "type_classification": "Astrocytic Activity Modulator",
+        "med_condition": "Chronic Neuropathic Pain (glial activation), Seizure Disorders (glial excitability)",
+        "drug_interactions": "Antiepileptic Drugs: Potential for altered seizure threshold.  Opioids: Altered pain perception.",
+        "contra_indications": "Active Brain Tumor, Severe CNS Infection, Acute Brain Hemorrhage."
+    },
+    {
+        "drug_name": "Hemo-Glia",
+        "type_classification": "Blood-Brain Barrier Integrity Enhancer",
+        "med_condition": "Brain Edema (post-stroke), Encephalitis (to reduce inflammation)",
+        "drug_interactions": "Osmotic Diuretics: Additive dehydration, electrolyte imbalance.  Corticosteroids: Complex effects on cerebral fluid dynamics.",
+        "contra_indications": "Acute Cerebral Hemorrhage, Severe Intracranial Hypertension (uncontrolled), Severe Dehydration."
+    },
+    {
+        "drug_name": "Immuno-Replenish",
+        "type_classification": "B-Cell Maturation Factor",
+        "med_condition": "Common Variable Immunodeficiency (CVID), Post-Chemotherapy Immunosuppression",
+        "drug_interactions": "Immunosuppressants: Direct antagonism.  Live Vaccines: Increased risk of vaccine-induced infection.",
+        "contra_indications": "Active Malignancy (B-cell lymphoma/leukemia), Autoimmune Diseases (active flare), Organ Transplant Recipients."
+    },
+    {
+        "drug_name": "Lacteal-Flow",
+        "type_classification": "Lymphatic Vessel Permeability Modifier",
+        "med_condition": "Lymphedema (fibrotic changes), Chylothorax (adjunctive)",
+        "drug_interactions": "Diuretics: Potential for dehydration, electrolyte imbalance.  Anticoagulants: Increased bleeding risk.",
+        "contra_indications": "Active Cellulitis (uncontrolled), Deep Vein Thrombosis (DVT), Congestive Heart Failure (decompensated)."
+    },
+    {
+        "drug_name": "Musculo-Force",
+        "type_classification": "Type II Muscle Fiber Hypertrophy Agent",
+        "med_condition": "Sarcopenia (severe), Cachexia (muscle wasting)",
+        "drug_interactions": "Corticosteroids: Can lead to muscle wasting.  Anabolic Steroids: Potential for severe side effects.",
+        "contra_indications": "Active Malignancy, Severe Cardiovascular Disease, Liver Impairment (severe)."
+    },
+    {
+        "drug_name": "Neuro-Growth",
+        "type_classification": "Neurotrophic Factor Mimetic",
+        "med_condition": "Peripheral Neuropathy (severe nerve damage), Diabetic Neuropathy (painful, sensory loss)",
+        "drug_interactions": "Opioids: Reduced pain perception, masking nerve regeneration.  Antidepressants (TCAs, SNRIs): Potential for additive neuropathy.",
+        "contra_indications": "Acute Nerve Compression (unrelieved), Active Nerve Trauma, Severe Neuropathic Pain (exacerbation)."
+    },
+    {
+        "drug_name": "Olfacto-Restore",
+        "type_classification": "Olfactory Bulb Neuron Regenerator",
+        "med_condition": "Post-Viral Anosmia, Traumatic Anosmia",
+        "drug_interactions": "Systemic Steroids: Altered neurogenesis.  Topical Nasal Steroids: Potential for mucosal thinning.",
+        "contra_indications": "Active Nasal Infection, Brain Tumor (affecting olfactory bulb), Severe Head Trauma (acute)."
+    },
+    {
+        "drug_name": "Pancreo-Shield",
+        "type_classification": "Pancreatic Acinar Cell Protectant",
+        "med_condition": "Acute Pancreatitis (preventative), Chronic Pancreatitis (exacerbation prevention)",
+        "drug_interactions": "Alcohol: Direct pancreatic toxicity.  Gallstone-forming drugs: Increased risk of pancreatitis.",
+        "contra_indications": "Acute Pancreatitis (active, severe), Pancreatic Cancer (unresectable), Severe Gallstone Disease (obstructive)."
+    },
+    {
+        "drug_name": "Pulmo-Force",
+        "type_classification": "Alveolar Macrophage Phagocytosis Enhancer",
+        "med_condition": "Recurrent Pneumonia (immunocompromised), Chronic Obstructive Pulmonary Disease (COPD) infections",
+        "drug_interactions": "Immunosuppressants: Inhibits macrophage function.  Corticosteroids: Suppresses inflammation and macrophage activity.",
+        "contra_indications": "Active Pulmonary Infection (bacterial/fungal/viral), Autoimmune Pulmonary Disorders, Severe Respiratory Failure."
+    },
+    {
+        "drug_name": "Rhino-Clear",
+        "type_classification": "Nasal Ciliary Function Restorer",
+        "med_condition": "Primary Ciliary Dyskinesia (PCD), Chronic Rhinosinusitis (mucociliary dysfunction)",
+        "drug_interactions": "Nasal Decongestants: Drying effect, ciliary impairment.  Antihistamines: Drying effect.",
+        "contra_indications": "Acute Nasal Infection, Severe Nasal Septal Perforation, History of Severe Allergic Reaction to Nasal Sprays."
+    },
+    {
+        "drug_name": "Spiro-Sense",
+        "type_classification": "Chemoreceptor Sensitivity Modulator",
+        "med_condition": "Central Hypoventilation Syndrome, High-Altitude Pulmonary Edema (preventative)",
+        "drug_interactions": "Opioids: Increased respiratory depression.  Sedatives: Increased respiratory depression.",
+        "contra_indications": "Acute Respiratory Failure, Severe COPD with CO2 retention (paradoxical effect), Severe Neurological Conditions Affecting Respiration."
+    },
+    {
+        "drug_name": "Testo-Restore",
+        "type_classification": "Leydig Cell Stimulator",
+        "med_condition": "Primary Hypogonadism (male), Androgen Deficiency in Aging Males (ADAM)",
+        "drug_interactions": "Exogenous Testosterone: Risk of supraphysiological levels, feedback inhibition.  GnRH Analogs: May interfere with hypothalamic-pituitary-gonadal axis.",
+        "contra_indications": "Prostate Cancer (active or history), Male Breast Cancer, Severe Liver Impairment, Sleep Apnea (severe)."
+    },
+    {
+        "drug_name": "Uro-Detox",
+        "type_classification": "Bladder Epithelial Detoxifier",
+        "med_condition": "Interstitial Cystitis (pain reduction), Recurrent UTIs (adherence prevention)",
+        "drug_interactions": "Urinary Alkalinizers: May alter efficacy.  Antibiotics: No direct interaction, but should treat active infection.",
+        "contra_indications": "Active Urinary Tract Infection (untreated), Severe Bladder Outlet Obstruction, Known Allergy to Urinary Antiseptics."
+    },
+    {
+        "drug_name": "Vascular-Shield",
+        "type_classification": "Arterial Wall Fibrosis Inhibitor",
+        "med_condition": "Atherosclerosis (fibrotic plaque stabilization), Arteriosclerosis",
+        "drug_interactions": "Statins: Potential for additive effects on plaque.  Antihypertensives: May exacerbate hypotension.",
+        "contra_indications": "Acute Aortic Dissection, Severe Uncontrolled Hypertension, Active Internal Bleeding."
+    },
+    {
+        "drug_name": "Voice-Soft",
+        "type_classification": "Vocal Cord Muscle Relaxant (Localized)",
+        "med_condition": "Vocal Cord Spasm, Hyperfunctional Dysphonia",
+        "drug_interactions": "Systemic Muscle Relaxants: Increased laryngeal muscle weakness.  Botulinum Toxin Injections: Additive paralysis.",
+        "contra_indications": "Vocal Cord Paralysis (unilateral/bilateral), Acute Laryngitis (active infection), Severe Respiratory Distress."
+    },
+    {
+        "drug_name": "Adreno-Calm",
+        "type_classification": "Adrenal Cortical Hyperplasia Inhibitor",
+        "med_condition": "Congenital Adrenal Hyperplasia (CAH), Cushing's Syndrome (mild, non-tumor)",
+        "drug_interactions": "Systemic Corticosteroids: Altered hormonal balance.  Enzyme Inducers/Inhibitors: Altered drug metabolism.",
+        "contra_indications": "Adrenal Carcinoma, Acute Adrenal Crisis, Severe Liver Impairment."
+    },
+    {
+        "drug_name": "Bone-Mend",
+        "type_classification": "Osteoblast-Osteoclast Balance Agent",
+        "med_condition": "Paget's Disease of Bone, Atypical Femur Fractures (recurrent)",
+        "drug_interactions": "Bisphosphonates: Altered bone remodeling.  Calcitonin: Reduced efficacy.",
+        "contra_indications": "Osteosarcoma, Hypercalcemia (uncontrolled), Severe Renal Impairment."
+    },
+    {
+        "drug_name": "Cerebro-Shield",
+        "type_classification": "Neurovascular Unit Protectant",
+        "med_condition": "Transient Ischemic Attack (TIA) prevention, Subarachnoid Hemorrhage (vasospasm prevention)",
+        "drug_interactions": "Anticoagulants: Increased risk of cerebral hemorrhage.  Antihypertensives (excessive): Risk of cerebral hypoperfusion.",
+        "contra_indications": "Acute Hemorrhagic Stroke, Uncontrolled Severe Hypertension, Cerebral Aneurysm (unrepaired)."
+    },
+    {
+        "drug_name": "Dento-Shield",
+        "type_classification": "Dentin Tubule Occluder",
+        "med_condition": "Dentin Hypersensitivity (severe), Post-Periodontal Surgery Sensitivity",
+        "drug_interactions": "Acidic Mouth Rinses: Reduced efficacy.  High-abrasive Toothpastes: Removal of protective layer.",
+        "contra_indications": "Active Dental Caries (untreated), Pulpitis (irreversible), Severe Periodontal Disease."
+    },
+    {
+        "drug_name": "Endo-Gene",
+        "type_classification": "Gene Expression Activator (Specific)",
+        "med_condition": "Genetic Deficiency Disorders (e.g., G6PD Deficiency, certain enzyme deficiencies)",
+        "drug_interactions": "Immunosuppressants: Essential to prevent immune rejection of gene therapy vectors.  Chemotherapy: Potential for altered efficacy.",
+        "contra_indications": "Active Malignancy (unless specifically for cancer gene therapy), Severe Autoimmune Disease, Pregnancy (if teratogenic)."
+    },
+    {
+        "drug_name": "Gastro-Digest",
+        "type_classification": "Gastric Emptying Accelerator",
+        "med_condition": "Gastroparesis (diabetic), Functional Dyspepsia (with delayed emptying)",
+        "drug_interactions": "Anticholinergics: Antagonism of prokinetic effect.  Opioids: Exacerbated constipation, reduced motility.",
+        "contra_indications": "Gastrointestinal Obstruction, Ileus, Active Severe Gastrointestinal Bleeding."
+    },
+    {
+        "drug_name": "Hepato-Clearse",
+        "type_classification": "Bile Acid Sequestrant (Novel)",
+        "med_condition": "Primary Biliary Cholangitis (PBC), Hypercholesterolemia (refractory to statins)",
+        "drug_interactions": "Fat-Soluble Vitamins (A, D, E, K): Reduced absorption.  Warfarin: Reduced absorption, altered INR.",
+        "contra_indications": "Complete Biliary Obstruction, Severe Hypertriglyceridemia (risk of pancreatitis), Severe Constipation."
+    },
+    {
+        "drug_name": "Immuno-Replenish",
+        "type_classification": "Natural Killer (NK) Cell Enhancer",
+        "med_condition": "Chronic Viral Infections (e.g., CMV, EBV), Immunodeficiency Disorders (NK cell dysfunction)",
+        "drug_interactions": "Immunosuppressants: Direct antagonism.  Live Vaccines: Increased risk of vaccine-induced illness.",
+        "contra_indications": "Active Autoimmune Disease (severe flare), Active Malignancy (NK cell leukemia), Organ Transplant Recipients (risk of rejection)."
+    },
+    {
+        "drug_name": "Lacteal-Immune",
+        "type_classification": "Peyer's Patch Stimulant",
+        "med_condition": "IgA Deficiency, Recurrent Respiratory Tract Infections (gut-immune axis)",
+        "drug_interactions": "Oral Antibiotics: Disruption of gut microbiome.  Immunosuppressants: Reduced efficacy.",
+        "contra_indications": "Severe Inflammatory Bowel Disease (active flare), Gastrointestinal Obstruction, Severe Immunodeficiency."
+    },
+    {
+        "drug_name": "Myo-Connect",
+        "type_classification": "Neuromuscular Junction Stabilizer",
+        "med_condition": "Myasthenia Gravis (refractory), Lambert-Eaton Myasthenic Syndrome (LEMS)",
+        "drug_interactions": "Muscle Relaxants: Increased respiratory depression, profound weakness.  Aminoglycoside Antibiotics: Increased neuromuscular blockade.",
+        "contra_indications": "Acute Respiratory Failure, Severe Myasthenia Gravis Crisis, Known Allergy to Cholinesterase Inhibitors."
+    },
+    {
+        "drug_name": "Neuro-Path",
+        "type_classification": "Axonal Regeneration Promoter",
+        "med_condition": "Peripheral Nerve Trauma, Brachial Plexus Injury",
+        "drug_interactions": "Corticosteroids (high dose): Impaired nerve healing.  NSAIDs: May delay nerve regeneration.",
+        "contra_indications": "Active Nerve Compression (unrelieved), Active Nerve Infection, Severe Autoimmune Neuropathy (active flare)."
+    },
+    {
+        "drug_name": "Oligo-Gene",
+        "type_classification": "Myelin Protein Synthesis Enhancer",
+        "med_condition": "Adrenoleukodystrophy (X-linked, early), Multiple Sclerosis (primary progressive, adjunctive)",
+        "drug_interactions": "Immunosuppressants: May inhibit beneficial cellular activity.  Chemotherapy: Potential for altered efficacy.",
+        "contra_indications": "Active Brain Tumor, Severe CNS Infection, History of Rapidly Progressive MS."
+    },
+    {
+        "drug_name": "Oxy-Neuro",
+        "type_classification": "Neuronal Oxygen Utilization Optimizer",
+        "med_condition": "Hypoxic-Ischemic Encephalopathy (recovery phase), Vascular Dementia (early)",
+        "drug_interactions": "Sedatives: Increased cerebral hypoperfusion.  Vasodilators (excessive): Risk of cerebral steal phenomenon.",
+        "contra_indications": "Acute Cerebral Hemorrhage, Severe Intracranial Hypertension, Acute Ischemic Stroke (unstable)."
+    },
+    {
+        "drug_name": "Panno-Immun",
+        "type_classification": "Pancreatic Islet Cell Immune Modulator",
+        "med_condition": "Type 1 Diabetes (newly diagnosed, for beta cell preservation), Autoimmune Pancreatitis",
+        "drug_interactions": "Immunosuppressants: Essential for autoimmune conditions.  Insulin/Oral Hypoglycemics: Risk of hypoglycemia.",
+        "contra_indications": "Active Severe Infection (uncontrolled), Active Malignancy, Severe Immunodeficiency."
+    },
+    {
+        "drug_name": "Peri-Repair",
+        "type_classification": "Pericardial Fibrosis Reducer",
+        "med_condition": "Constrictive Pericarditis (early), Post-Radiation Pericarditis",
+        "drug_interactions": "NSAIDs: Increased risk of gastrointestinal bleeding.  Corticosteroids: Additive immunosuppression, increased side effects.",
+        "contra_indications": "Acute Pericarditis (infectious), Pericardial Tamponade, Severe Coagulopathy."
+    },
+    {
+        "drug_name": "Spino-Regen",
+        "type_classification": "Spinal Cord Myelin Repair Agent",
+        "med_condition": "Multiple Sclerosis (spinal cord lesions), Transverse Myelitis (chronic)",
+        "drug_interactions": "Immunosuppressants: May inhibit myelin repair.  Corticosteroids: Complex effects on CNS cells and myelin.",
+        "contra_indications": "Active Spinal Cord Compression, Severe Spinal Infection, Active Spinal Cord Tumor."
+    },
+    {
+        "drug_name": "Telo-Protector",
+        "type_classification": "Telomere End-Capping Stabilizer",
+        "med_condition": "Aplastic Anemia (telomeropathy-related), Premature Aging Syndromes",
+        "drug_interactions": "Chemotherapy: Potential for interference with anti-cancer mechanisms.  Immunosuppressants: Reduced immune surveillance.",
+        "contra_indications": "Active Malignancy, Severe Autoimmune Disease, Severe Proliferative Disorders."
+    },
+    {
+        "drug_name": "Utero-Flex",
+        "type_classification": "Uterine Myometrial Elasticity Enhancer",
+        "med_condition": "Uterine Fibroids (symptomatic relief, non-surgical), Adenomyosis",
+        "drug_interactions": "Hormonal Contraceptives: Altered hormonal balance, potential for reduced efficacy.  NSAIDs: Reduced efficacy if inflammation is primary cause.",
+        "contra_indications": "Undiagnosed Abnormal Genital Bleeding, Uterine Malignancy, Pregnancy."
+    },
+    {
+        "drug_name": "Vascular-Remodel",
+        "type_classification": "Vascular Smooth Muscle Cell Modulator",
+        "med_condition": "Pulmonary Hypertension (non-specific), Peripheral Artery Disease (vasoconstriction)",
+        "drug_interactions": "Calcium Channel Blockers: Additive hypotensive effects.  Alpha-Blockers: Increased risk of profound hypotension.",
+        "contra_indications": "Severe Hypotension, Acute Myocardial Infarction, Severe Valvular Heart Disease (e.g., aortic stenosis)."
+    },
+    {
+        "drug_name": "Voice-Form",
+        "type_classification": "Vocal Cord Mass Augmenter",
+        "med_condition": "Vocal Fold Atrophy, Presbyphonia (age-related voice change)",
+        "drug_interactions": "Systemic Steroids: Potential for vocal cord atrophy.  Muscle Relaxants: Reduced vocal cord tension.",
+        "contra_indications": "Acute Laryngitis (active infection), Vocal Cord Malignancy, Recent Vocal Cord Surgery (early healing phase)."
+    }
+]

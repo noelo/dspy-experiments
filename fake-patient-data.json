@@ -1,0 +1,92 @@
+[
+  {
+    "patient_id": "P001-A23",
+    "name": "Eleanor Vance",
+    "age": 68,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Liver Impairment (Cirrhosis, Child-Pugh C)",
+    "other_relevant_medical_history": "History of chronic hepatitis C, portal hypertension, occasional ascites. No known drug allergies.",
+    "notes": "Currently managed with diuretics and careful fluid balance. Any new medication needs strict liver function monitoring."
+  },
+  {
+    "patient_id": "P002-B45",
+    "name": "Marcus Chen",
+    "age": 55,
+    "gender": "Male",
+    "primary_medical_condition": "Acute Narrow-Angle Glaucoma (recently diagnosed, prior attack)",
+    "other_relevant_medical_history": "Mild hypertension, controlled with a single agent. No other ocular history of note. Family history of glaucoma.",
+    "notes": "Requires immediate consultation with ophthalmology for any new drug consideration due to risk of increased intraocular pressure."
+  },
+  {
+    "patient_id": "P003-C67",
+    "name": "Isabella Rossi",
+    "age": 42,
+    "gender": "Female",
+    "primary_medical_condition": "Active Gastrointestinal Ulceration (duodenal ulcer, confirmed by endoscopy)",
+    "other_relevant_medical_history": "History of NSAID use for chronic back pain. Currently on a PPI. No known allergies.",
+    "notes": "Requires careful consideration for any medication that might irritate the GI tract or increase bleeding risk."
+  },
+  {
+    "patient_id": "P004-D89",
+    "name": "David Miller",
+    "age": 31,
+    "gender": "Male",
+    "primary_medical_condition": "Uncontrolled Autoimmune Disease (Systemic Lupus Erythematosus - active flare with nephritis)",
+    "other_relevant_medical_history": "On high-dose corticosteroids, history of recurrent infections. Requires close monitoring of kidney function.",
+    "notes": "Immunosuppressive status and active autoimmune flare make many drugs contra-indicated or require extreme caution."
+  },
+  {
+    "patient_id": "P005-E01",
+    "name": "Sofia Rodriguez",
+    "age": 75,
+    "gender": "Female",
+    "primary_medical_condition": "End-Stage Renal Disease (ESRD), not yet on dialysis",
+    "other_relevant_medical_history": "Type 2 Diabetes Mellitus (well-controlled with diet), history of congestive heart failure (compensated). Multiple drug allergies.",
+    "notes": "Severely impaired kidney function necessitates extreme caution with renally cleared drugs or those impacting fluid/electrolyte balance."
+  },
+  {
+    "patient_id": "P006-F23",
+    "name": "John Davies",
+    "age": 59,
+    "gender": "Male",
+    "primary_medical_condition": "Active Malignancy (Stage IV Non-Small Cell Lung Carcinoma)",
+    "other_relevant_medical_history": "Currently undergoing chemotherapy. History of deep vein thrombosis (DVT) with associated anticoagulant use.",
+    "notes": "Any new drug must be evaluated for interaction with chemotherapy and potential to promote tumor growth or interfere with oncological treatment."
+  },
+  {
+    "patient_id": "P007-G45",
+    "name": "Anya Sharma",
+    "age": 48,
+    "gender": "Female",
+    "primary_medical_condition": "History of Severe Thrombosis (recurrent PE, factor V Leiden mutation)",
+    "other_relevant_medical_history": "On long-term oral anticoagulant therapy (Warfarin). No known allergies.",
+    "notes": "High risk of bleeding and/or further thrombotic events. Drugs affecting coagulation or platelet function are contraindicated or require careful monitoring."
+  },
+  {
+    "patient_id": "P008-H67",
+    "name": "Robert Wilson",
+    "age": 71,
+    "gender": "Male",
+    "primary_medical_condition": "Severe Cardiac Disease (Decompensated Heart Failure with LVEF 20%, frequent arrhythmias)",
+    "other_relevant_medical_history": "History of multiple myocardial infarctions. On multiple cardiac medications.",
+    "notes": "Extremely fragile cardiac status; drugs impacting heart rate, rhythm, contractility, or fluid balance are highly risky."
+  },
+  {
+    "patient_id": "P009-I89",
+    "name": "Lena Kuznetsov",
+    "age": 29,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Psychosis (Schizophrenia, currently unstable with active hallucinations)",
+    "other_relevant_medical_history": "On multiple antipsychotic medications. History of paradoxical reactions to sedatives.",
+    "notes": "Mental status can be profoundly affected by CNS-acting drugs, requiring careful selection to avoid exacerbating symptoms or dangerous interactions."
+  },
+  {
+    "patient_id": "P010-J01",
+    "name": "Chen Wei",
+    "age": 62,
+    "gender": "Male",
+    "primary_medical_condition": "Myasthenia Gravis (generalized form, stable on Pyridostigmine)",
+    "other_relevant_medical_history": "History of respiratory crises due to myasthenia. No known allergies.",
+    "notes": "Medications that affect neuromuscular transmission or muscle strength are severely contraindicated due to risk of respiratory depression and exacerbation of weakness."
+  }
+]
