@@ -1,6 +1,7 @@
 import dspy
 import dspy.predict
 from pydantic import BaseModel, Field,TypeAdapter
+from typing_extensions import TypedDict
 import pathlib
 import logging
 from dspy.utils.logging_utils import DSPyLoggingStream
@@ -20,13 +21,13 @@ formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 root.addHandler(handler)
 
-class GithubIssue(BaseModel):
-    repo: str = Field(alias="repo")
-    issue_title: str = Field(alias="title")
-    issue_body: str = Field(title="body")
+class GithubIssue(TypedDict):
+    repo: str
+    title: str 
+    body: str  
 
 class GithubOperation(BaseModel):
-    operation_name: str = Field(title="name")
+    name: str = Field(alias="name",default="create_issue")
     arguments: GithubIssue
     
 class OpenshiftIssueService(dspy.Signature):
@@ -34,7 +35,7 @@ class OpenshiftIssueService(dspy.Signature):
 
     log_message: str = dspy.InputField(desc=("contains the pod logs"))
     repo_name: str = dspy.InputField(desc=("Name of the github repo"))
-    github: GithubOperation = dspy.OutputField(desc=("A github create_issue operation with the title of Pipeline Issue and issue_body containing the log summerization"))   
+    github: GithubOperation = dspy.OutputField(desc=("A github operation with the title of Pipeline Issue and body containing the log summerization"),prefix=" ")   
     
     
 def static_run():
@@ -42,10 +43,10 @@ def static_run():
     
     print(OpenshiftIssueService)
     pod_processor = dspy.Predict(OpenshiftIssueService)
-    result= pod_processor(log_message=pod_logs,repo_name="test repo")
+    result= pod_processor(log_message=pod_logs,repo_name="Red Hat ETX Repo")
     print(result)
-    dspy.inspect_history(n=50)
-    dspy   
+    # dspy.inspect_history(n=50)
+    # dspy   
 
 
 if __name__ == "__main__":
