@@ -4,7 +4,7 @@
         "type_classification": "Fluid & Electrolyte Homeostasis Agent",
         "med_condition": "Chronic Dehydration, Electrolyte Imbalance (mild to moderate)",
         "drug_interactions": "Diuretics (e.g., Furosemide): Risk of severe dehydration, electrolyte derangement.  ACE Inhibitors/ARBs: May exacerbate hypotension or hyperkalemia.",
-        "contra_indications": "Severe Edema (e.g., pulmonary edema), Congestive Heart Failure (decompensated), Severe Renal Impairment (anuric phase)."
+        "contra_indications": "Severe Edema (e.g., pulmonary edema), Congestive Heart Failure (decompensated), Severe Renal Impairment (anuric phase). Not suitable for Geriatric patients"
     },
     {
         "drug_name": "Cardio-Flex",
@@ -25,14 +25,14 @@
         "type_classification": "T-Regulatory Cell Inducer",
         "med_condition": "Rheumatoid Arthritis (refractory), Crohn's Disease (moderate to severe)",
         "drug_interactions": "Other Immunosuppressants (e.g., Methotrexate, Cyclosporine): Increased risk of severe infection, profound immune suppression.  Live Vaccines: Risk of vaccine-induced infection.",
-        "contra_indications": "Active Severe Infection (bacterial, viral, fungal), Active Malignancy (unless indicated for specific cancers), Severe Immunodeficiency."
+        "contra_indications": "Active Severe Infection (bacterial, viral, fungal), Active Malignancy (unless indicated for specific cancers), Severe Immunodeficiency. Not suitable for Geriatric patients"
     },
     {
         "drug_name": "Neuro-Synapse",
         "type_classification": "Synaptic Plasticity Enhancer",
         "med_condition": "Post-Concussion Syndrome (cognitive deficits), Learning Disorders (specific types)",
         "drug_interactions": "CNS Stimulants (e.g., Amphetamines): Increased risk of excitotoxicity, seizures.  Antiepileptic Drugs: May alter seizure threshold or reduce efficacy.",
-        "contra_indications": "Active Seizure Disorder (uncontrolled), Severe Psychosis, Recent Cerebral Hemorrhage."
+        "contra_indications": "Active Seizure Disorder (uncontrolled), Severe Psychosis, Recent Cerebral Hemorrhage. Not suitable for Geriatric patients"
     },
     {
         "drug_name": "Oculo-Regen",
@@ -179,7 +179,7 @@
         "type_classification": "Cerebral Glymphatic Flow Enhancer",
         "med_condition": "Chronic Traumatic Encephalopathy (CTE) early stage, Post-Stroke Brain Edema (resolution)",
         "drug_interactions": "Osmotic Diuretics: Risk of severe dehydration, electrolyte imbalance.  Corticosteroids: Complex effects on cerebral fluid dynamics.",
-        "contra_indications": "Active Cerebral Hemorrhage, Severe Intracranial Hypertension (uncontrolled), Severe Dehydration."
+        "contra_indications": "Active Cerebral Hemorrhage, Severe Intracranial Hypertension (uncontrolled), Severe Dehydration. Not suitable for Geriatric patients"
     },
     {
         "drug_name": "Dento-Strong",
@@ -263,7 +263,7 @@
         "type_classification": "Pancreatic Islet Cell Anti-Inflammatory",
         "med_condition": "Pancreatitis (chronic, to reduce inflammation), Type 1 Diabetes (autoimmune component)",
         "drug_interactions": "Corticosteroids: Additive immunosuppression, increased risk of infection.  Other Anti-inflammatories: Increased risk of gastrointestinal side effects.",
-        "contra_indications": "Active Pancreatitis (acute flare), Pancreatic Cancer (unresectable), Severe Immunodeficiency."
+        "contra_indications": "Active Pancreatitis (acute flare), Pancreatic Cancer (unresectable), Severe Immunodeficiency. Not suitable for Geriatric patients"
     },
     {
         "drug_name": "Peri-Calm",
@@ -340,7 +340,7 @@
         "type_classification": "Astrocytic Activity Modulator",
         "med_condition": "Chronic Neuropathic Pain (glial activation), Seizure Disorders (glial excitability)",
         "drug_interactions": "Antiepileptic Drugs: Potential for altered seizure threshold.  Opioids: Altered pain perception.",
-        "contra_indications": "Active Brain Tumor, Severe CNS Infection, Acute Brain Hemorrhage."
+        "contra_indications": "Not suitable for Geriatric patients. Active Brain Tumor, Severe CNS Infection, Acute Brain Hemorrhage."
     },
     {
         "drug_name": "Hemo-Glia",
@@ -543,7 +543,7 @@
         "type_classification": "Pericardial Fibrosis Reducer",
         "med_condition": "Constrictive Pericarditis (early), Post-Radiation Pericarditis",
         "drug_interactions": "NSAIDs: Increased risk of gastrointestinal bleeding.  Corticosteroids: Additive immunosuppression, increased side effects.",
-        "contra_indications": "Acute Pericarditis (infectious), Pericardial Tamponade, Severe Coagulopathy."
+        "contra_indications": "Not suitable for geriatric patients. Acute Pericarditis (infectious), Pericardial Tamponade, Severe Coagulopathy."
     },
     {
         "drug_name": "Spino-Regen",

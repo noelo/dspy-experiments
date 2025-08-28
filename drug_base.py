@@ -43,13 +43,23 @@ class Patient(BaseModel):
     notes: str 
     
 class DrugAdvisorService(dspy.Signature):
-    """You are a medical advisor assistant. You are given a list of drugs . You will be provided patient details and you need to determine what drug best addresses the patients condition taking their history and notes into account"""
+    """You are a medical advisor assistant. You are given a list of drugs. You will be provided patient details and you need to determine what drug best addresses the patients condition taking their history and notes into account"""
 
     patient_details: Patient = dspy.InputField(desc=("contains the patients details as well as condition, medical history and medical notes"))
     drug_list: list[Drug] = dspy.InputField(desc=("contains the drug name, condition details , negative drug interactions and contra indications"))
+    patient_age_group: str = dspy.OutputField(
+        desc=(
+            "What age group is the patient in?"
+        )
+    )
     drug_advice: str = dspy.OutputField(
         desc=(
-            "The best drug that addresses the patients condition but takes the patients medical condition, medical history and notes into account"
+            "The two most suitable drugs that addresses the patients condition but takes the patients medical condition, medical history and notes into account"
+        )
+    )
+    drug_name: str = dspy.OutputField(
+        desc=(
+            "The name of the two most suitable drugs that addresses the patients condition but takes the patients medical condition, medical history and notes into account"
         )
     )
     
@@ -71,8 +81,13 @@ def static_run():
     patients_json = pathlib.Path('fake-patient-data.json').read_text()
     drugs = TypeAdapter(list[Drug]).validate_json(drugs_json)
     patients = TypeAdapter(list[Patient]).validate_json(patients_json)
+    print(f"Number of Patients : {len(patients)}")
 
     p_id= randrange(len(patients))
+    # p_id=7
+    
+    print(f"\n Processing {patients[p_id]}")
+    print(DrugAdvisorService)
     drug_predict = dspy.ChainOfThought(DrugAdvisorService)
     result= drug_predict(patient_details=patients[p_id],drug_list=drugs)
     print(result)

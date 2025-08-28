@@ -88,5 +88,239 @@
     "primary_medical_condition": "Myasthenia Gravis (generalized form, stable on Pyridostigmine)",
     "other_relevant_medical_history": "History of respiratory crises due to myasthenia. No known allergies.",
     "notes": "Medications that affect neuromuscular transmission or muscle strength are severely contraindicated due to risk of respiratory depression and exacerbation of weakness."
+  },
+  {
+    "patient_id": "P011-K12",
+    "name": "Michael Carter",
+    "age": 58,
+    "gender": "Male",
+    "primary_medical_condition": "Uncontrolled Hypertension (systolic pressure consistently above 160 mmHg)",
+    "other_relevant_medical_history": "History of stage 1 hypertension, but has been non-compliant with medication. No other cardiac history.",
+    "notes": "Requires immediate blood pressure management. New drugs must be carefully screened for those that could raise blood pressure or cause a hypertensive crisis."
+  },
+  {
+    "patient_id": "P012-L34",
+    "name": "Jessica Lee",
+    "age": 35,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Allergic Reaction to Photosensitizing Drugs (confirmed reaction to a tetracycline-class antibiotic)",
+    "other_relevant_medical_history": "History of a severe, blistering rash and photosensitivity after sun exposure. Known drug allergies include penicillin.",
+    "notes": "Extreme caution is required for any drug that may increase sun sensitivity or have a similar chemical structure to known allergens."
+  },
+  {
+    "patient_id": "P013-M56",
+    "name": "Samuel Johnson",
+    "age": 65,
+    "gender": "Male",
+    "primary_medical_condition": "Active Systemic Infection (Streptococcal bacteremia, blood cultures positive)",
+    "other_relevant_medical_history": "Chronic kidney disease (Stage 3). Recently hospitalized for a non-related issue.",
+    "notes": "Any new drug with immunosuppressive properties is absolutely contraindicated until the infection is cleared. The patient's compromised kidney function also limits many drug choices."
+  },
+  {
+    "patient_id": "P014-N78",
+    "name": "Maria Sanchez",
+    "age": 51,
+    "gender": "Female",
+    "primary_medical_condition": "Active Internal Bleeding (upper gastrointestinal bleed, requiring transfusion)",
+    "other_relevant_medical_history": "History of chronic NSAID use for arthritis. No known clotting disorders.",
+    "notes": "All anticoagulant, antiplatelet, or GI-irritating drugs are immediately contraindicated. Any new medication must not increase bleeding risk."
+  },
+  {
+    "patient_id": "P015-O90",
+    "name": "Alex Petrov",
+    "age": 24,
+    "gender": "Male",
+    "primary_medical_condition": "Chronic Dehydration (due to an unrelated medical condition)",
+    "other_relevant_medical_history": "Healthy otherwise. No known drug allergies.",
+    "notes": "Any medication that affects fluid balance, especially diuretics or those that could cause further fluid loss, should be avoided or used with extreme caution."
+  },
+  {
+    "patient_id": "P016-P12",
+    "name": "Lisa Kim",
+    "age": 49,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Hypersensitivity to Aerosolized Agents (diagnosed with a severe, immediate asthmatic response)",
+    "other_relevant_medical_history": "Severe asthma requiring daily inhalers. History of reactions to certain chemical fragrances and airborne particles.",
+    "notes": "Inhaled drugs must be evaluated for their potential to trigger a bronchospastic reaction. The patient is at high risk for a severe respiratory event."
+  },
+  {
+    "patient_id": "P017-Q34",
+    "name": "Frank Chen",
+    "age": 78,
+    "gender": "Male",
+    "primary_medical_condition": "Chronic Atrial Fibrillation with a history of embolic stroke.",
+    "other_relevant_medical_history": "Stable on anticoagulants and a rate-control medication. Mild renal insufficiency.",
+    "notes": "Requires careful screening for drugs that could affect heart rate, prolong the QT interval, or interact with his anticoagulant therapy."
+  },
+  {
+    "patient_id": "P018-R56",
+    "name": "Susan White",
+    "age": 64,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Hypothyroidism (Hashimoto's thyroiditis)",
+    "other_relevant_medical_history": "On a stable dose of thyroid replacement hormone. History of osteoporosis.",
+    "notes": "Any new drug needs to be checked for potential interactions that could alter thyroid hormone absorption or metabolism."
+  },
+  {
+    "patient_id": "P019-S78",
+    "name": "George Davis",
+    "age": 55,
+    "gender": "Male",
+    "primary_medical_condition": "Benign Prostatic Hyperplasia (BPH) with urinary retention.",
+    "other_relevant_medical_history": "No other significant medical history.",
+    "notes": "Drugs with anticholinergic effects or those that could increase bladder pressure should be avoided to prevent worsening of urinary retention."
+  },
+  {
+    "patient_id": "P020-T90",
+    "name": "Helen Garcia",
+    "age": 82,
+    "gender": "Female",
+    "primary_medical_condition": "Parkinson's Disease with motor fluctuations.",
+    "other_relevant_medical_history": "On multiple dopaminergic medications. History of orthostatic hypotension.",
+    "notes": "Extreme caution is needed for drugs that block dopamine receptors or cause sedation, as these can worsen motor symptoms and hypotension."
+  },
+  {
+    "patient_id": "P021-U12",
+    "name": "Carl Jones",
+    "age": 67,
+    "gender": "Male",
+    "primary_medical_condition": "Uncontrolled Diabetes Mellitus (Type 2, A1C > 9.0%).",
+    "other_relevant_medical_history": "History of diabetic neuropathy and peripheral arterial disease.",
+    "notes": "Any new drug needs to be checked for interactions that could affect blood glucose levels or exacerbate his cardiovascular issues."
+  },
+  {
+    "patient_id": "P022-V34",
+    "name": "Linda Brown",
+    "age": 71,
+    "gender": "Female",
+    "primary_medical_condition": "History of Osteosarcoma (successfully treated 10 years ago).",
+    "other_relevant_medical_history": "Currently healthy, with no signs of recurrence. On a calcium and vitamin D supplement.",
+    "notes": "Extreme caution is needed for any drug that promotes bone growth or cellular proliferation, as this could potentially lead to a recurrence of the malignancy."
+  },
+  {
+    "patient_id": "P023-W56",
+    "name": "Henry Wilson",
+    "age": 61,
+    "gender": "Male",
+    "primary_medical_condition": "End-Stage Liver Disease (on liver transplant waiting list).",
+    "other_relevant_medical_history": "History of chronic alcohol use. Severe portal hypertension.",
+    "notes": "Liver metabolism is severely compromised. Any new medication must have a non-hepatic clearance pathway."
+  },
+  {
+    "patient_id": "P024-X78",
+    "name": "Elizabeth Taylor",
+    "age": 76,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Chronic Obstructive Pulmonary Disease (COPD) with frequent exacerbations.",
+    "other_relevant_medical_history": "History of smoking. On multiple inhaled bronchodilators and steroids.",
+    "notes": "Drugs that can cause respiratory depression or fluid retention should be strictly avoided."
+  },
+  {
+    "patient_id": "P025-Y90",
+    "name": "Thomas Green",
+    "age": 58,
+    "gender": "Male",
+    "primary_medical_condition": "Severe Uncontrolled Hypertension (hypertensive crisis last month).",
+    "other_relevant_medical_history": "On multiple antihypertensive agents.",
+    "notes": "Any drug that affects blood pressure, especially those with vasoconstrictive properties, is extremely dangerous for this patient."
+  },
+  {
+    "patient_id": "P026-Z01",
+    "name": "Alex Rodriguez",
+    "age": 16,
+    "gender": "Male",
+    "primary_medical_condition": "Uncontrolled Allergic Rhinitis (severe hay fever).",
+    "other_relevant_medical_history": "Mild, intermittent asthma. Uses a rescue inhaler.",
+    "notes": "Avoidance of drugs that can cause bronchospasm or have a drying effect on mucous membranes is crucial."
+  },
+  {
+    "patient_id": "P027-A23",
+    "name": "Maya Singh",
+    "age": 14,
+    "gender": "Female",
+    "primary_medical_condition": "Severe Seizure Disorder (refractory to two medications).",
+    "other_relevant_medical_history": "Currently on two antiepileptic drugs.",
+    "notes": "Any new drug must be carefully screened for its potential to lower the seizure threshold or interact with her existing medications."
+  },
+  {
+    "patient_id": "P028-B45",
+    "name": "Noah Williams",
+    "age": 8,
+    "gender": "Male",
+    "primary_medical_condition": "Hypophosphatemic Rickets.",
+    "other_relevant_medical_history": "On phosphate and vitamin D supplements.",
+    "notes": "Any drug that affects calcium or phosphate metabolism, or that could lead to renal calcification, should be avoided."
+  },
+  {
+    "patient_id": "P029-C67",
+    "name": "Emily Jones",
+    "age": 6,
+    "gender": "Female",
+    "primary_medical_condition": "Uncontrolled Asthma.",
+    "other_relevant_medical_history": "History of multiple ER visits for asthma exacerbations.",
+    "notes": "Inhaled drugs must be tested for potential to induce bronchospasm. Avoid systemic drugs that could worsen asthma."
+  },
+  {
+    "patient_id": "P030-D89",
+    "name": "Leo Kim",
+    "age": 10,
+    "gender": "Male",
+    "primary_medical_condition": "Attention-Deficit/Hyperactivity Disorder (ADHD).",
+    "other_relevant_medical_history": "History of mild anxiety. Not currently on medication.",
+    "notes": "Stimulant-type drugs should be introduced with caution due to the anxiety history. Any drug that affects CNS function needs careful titration."
+  },
+  {
+    "patient_id": "P031-E01",
+    "name": "Baby Boy Smith",
+    "age": 3,
+    "gender": "Male",
+    "primary_medical_condition": "Hyperbilirubinemia (jaundice).",
+    "other_relevant_medical_history": "Full-term infant, delivered vaginally. No other significant issues.",
+    "notes": "Drugs that displace bilirubin from albumin, or that are cleared by the immature liver, must be avoided to prevent kernicterus."
+  },
+  {
+    "patient_id": "P032-F23",
+    "name": "Baby Girl Johnson",
+    "age": 1,
+    "gender": "Female",
+    "primary_medical_condition": "Suspected Neonatal Sepsis.",
+    "other_relevant_medical_history": "Full-term infant, currently on broad-spectrum antibiotics.",
+    "notes": "Any drug with immunosuppressive effects is absolutely contraindicated. Drugs with significant renal clearance must be used cautiously due to immature kidney function."
+  },
+  {
+    "patient_id": "P033-G45",
+    "name": "Baby A. (Preterm)",
+    "age": 2,
+    "gender": "Female",
+    "primary_medical_condition": "Respiratory Distress Syndrome (RDS) with a Patent Ductus Arteriosus (PDA).",
+    "other_relevant_medical_history": "Undergoing mechanical ventilation.",
+    "notes": "Drugs that affect prostaglandins or blood vessel constriction are extremely high risk. NSAIDs, in particular, must be avoided due to the PDA."
+  },
+  {
+    "patient_id": "P034-H67",
+    "name": "Baby B. (Preterm)",
+    "age": 1,
+    "gender": "Male",
+    "primary_medical_condition": "Necrotizing Enterocolitis (NEC).",
+    "other_relevant_medical_history": "Currently receiving total parenteral nutrition (TPN).",
+    "notes": "Drugs that affect gastrointestinal motility, blood flow to the gut, or are cleared by the immature liver/kidneys are contraindicated."
+  },
+  {
+    "patient_id": "P035-I89",
+    "name": "Baby C. (Preterm)",
+    "age": 3,
+    "gender": "Female",
+    "primary_medical_condition": "Intraventricular Hemorrhage (IVH).",
+    "other_relevant_medical_history": "Stable, but requires close neurological monitoring.",
+    "notes": "Drugs that affect cerebral blood flow, cause bleeding, or alter clotting are absolutely contraindicated due to the risk of re-bleeding."
+  },
+  {
+    "patient_id": "P036-J01",
+    "name": "Liam Chen",
+    "age": 11,
+    "gender": "Male",
+    "primary_medical_condition": "Chronic Inflammatory Bowel Disease (Crohn's disease).",
+    "other_relevant_medical_history": "Currently on an immunosuppressant. Has a history of frequent stomach pain.",
+    "notes": "Any new drug with GI-irritating properties is to be avoided. Drugs that further suppress the immune system are high risk."
   }
 ]
