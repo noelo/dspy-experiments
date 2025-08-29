@@ -25,6 +25,10 @@ class GithubIssue(TypedDict):
     repo: str
     title: str 
     body: str  
+    
+class ExampleDataSet(TypedDict):
+    logs: str
+    gh_cmd: str 
 
 class GithubOperation(BaseModel):
     name: str = Field(alias="name",default="create_issue")
@@ -47,9 +51,19 @@ def static_run():
     print(result)
     # dspy.inspect_history(n=50)
     # dspy   
+    
+    
+def build_examples():     
+    example_json = pathlib.Path('pod-log-training-examples.json').read_text()   
+    training_examples = TypeAdapter(list[ExampleDataSet]).validate_json(example_json)
+    
+    print(len(training_examples))
+
 
 
 if __name__ == "__main__":
+    ex = build_examples()
+    print(ex)
     lls_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
     model_list = lls_client.models.list()
     llm = dspy.LM(
