@@ -1,3 +1,4 @@
+from ast import List
 from typing import Any
 import dspy
 from dspy import GEPA
@@ -37,31 +38,16 @@ class AILanguageDetector(dspy.Signature):
     result: int = dspy.OutputField(desc=("0 for human 1 for AI"))
 
 
-# def static_run():
-#     texts = df['text_content'].tolist()
-#     print(texts[0])
-
-#     text_processor = dspy.Predict(AILanguageDetector)
-
-#     result = text_processor(input_text=texts[0])
-#     print(result.result)
-#     dspy.inspect_history(n=50)
-
-
 def score_pred(gold, pred):
     """
     Compute score.
     """
-    # if pred.result == 0:
-    #     print("HUMAN")
-    #     human_count+1
 
     score = 1.0 if gold == pred.result else 0.0
-    # print(f'Score {score} Gold {gold}, Prediction {pred.result}')
     return score
 
 
-def metric(example, pred, trace=None, pred_name=None, pred_trace=None):
+def mipro_metric(example, pred, trace=None, pred_name=None, pred_trace=None):
     # Parse gold standard from example
     gold = example["result"]
 
@@ -91,57 +77,61 @@ def optimise_prompt_gepa():
 
     optimizer = dspy.GEPA(
         metric=gepa_metric,
-        auto="light", 
+        auto="light",
         num_threads=1,
         track_stats=True,
         use_merge=False,
-        reflection_lm=reflection_lm
+        reflection_lm=reflection_lm,
     )
-    
+
     optimized_program = optimizer.compile(
         text_processor,
         trainset=train_set,
         valset=val_set,
     )
 
-    evaluate_prompt(optimized_program)
-    optimized_program.save("gepa-prompt.json")    
+    evaluate_prompt(optimized_program, val_set)
+    optimized_program.save("gepa-prompt.json")
+
 
 def optimise_prompt_bootstrap():
     text_processor = dspy.Predict(AILanguageDetector)
-    
+
     optimizer = dspy.BootstrapFinetune(num_threads=16)
     optimized_program = optimizer.compile(
         text_processor,
         trainset=train_set,
-        # valset=val_set,
     )
 
-    evaluate_prompt(optimized_program)
     optimized_program.save("bootstrap-prompt.json")
-    
+    evaluate_prompt(optimized_program, val_set)
+
+
 def optimise_prompt_miprov2():
     text_processor = dspy.Predict(AILanguageDetector)
-    
+    print(text_processor.dump_state())
     optimizer = MIPROv2(
-        metric=metric,
-        auto="medium", # Can choose between light, medium, and heavy optimization runs
+        metric=mipro_metric,
+        auto="light",
+        verbose=True
     )
     optimized_program = optimizer.compile(
         text_processor,
         trainset=train_set,
+        valset=val_set
     )
-
-    evaluate_prompt(optimized_program)
-
+    print(optimized_program.dump_state())
+    
     optimized_program.save("mipro-prompt.json")
- 
 
-def evaluate_prompt(text_processor:Any):
+    evaluate_prompt(optimized_program, val_set)
 
+
+
+def evaluate_prompt(text_processor: Any, validation_set: List):
     evaluate = dspy.Evaluate(
-        devset=dspy_dataset,
-        metric=metric,
+        devset=validation_set,
+        metric=mipro_metric,
         num_threads=5,
         display_table=10,
         display_progress=True,
@@ -152,10 +142,9 @@ def evaluate_prompt(text_processor:Any):
 
 def init_dataset():
     df = pd.read_csv("data/balanced_ai_human_prompts.csv")
-    print(df)
-
+    full_dspy_dataset=[]
     for index, row in df.iterrows():
-        dspy_dataset.append(
+        full_dspy_dataset.append(
             dspy.Example(
                 {
                     "input_text": row["text"],
@@ -164,23 +153,21 @@ def init_dataset():
             ).with_inputs("input_text")
         )
 
-    random.Random(0).shuffle(dspy_dataset)
-    train_set = dspy_dataset[: int(len(dspy_dataset) * 0.33)]
-    val_set = dspy_dataset[
-        int(len(dspy_dataset) * 0.33) : int(len(dspy_dataset) * 0.66)
+    random.Random(0).shuffle(full_dspy_dataset)
+    train_set = full_dspy_dataset[: int(len(full_dspy_dataset) * 0.33)]
+    val_set = full_dspy_dataset[
+        int(len(full_dspy_dataset) * 0.33) : int(len(full_dspy_dataset) * 0.66)
     ]
-    test_set = dspy_dataset[int(len(dspy_dataset) * 0.66) :]
-    print(train_set[:2])
+    test_set = full_dspy_dataset[int(len(full_dspy_dataset) * 0.66) :]
 
-    return train_set, val_set, test_set
+    return full_dspy_dataset, train_set, val_set, test_set
 
 
 if __name__ == "__main__":
-    dspy_dataset = []
-    human_count = 0
-    train_set, val_set, test_set = init_dataset()
-
-    print(f"{len(dspy_dataset)}---{len(train_set)}, {len(val_set)}, {len(test_set)}")
+    full_dspy_dataset, train_set, val_set, test_set = init_dataset()
+    print(
+        f"{len(full_dspy_dataset)}---Training:{len(train_set)}, Validation:{len(val_set)}, Test:{len(test_set)}"
+    )
 
     lls_client = LlamaStackClient(base_url=LLAMA_STACK_URL)
     model_list = lls_client.models.list()
@@ -198,19 +185,18 @@ if __name__ == "__main__":
     LOGGING_LINE_FORMAT = "%(asctime)s %(levelname)s %(name)s: %(message)s"
     LOGGING_DATETIME_FORMAT = "%Y/%m/%d %H:%M:%S"
     dspy.configure(lm=llm)
+    dspy.configure_cache(
+        enable_disk_cache=False,
+        enable_memory_cache=False,
+    )
     # static_run()
     # evaluate_prompt()
     # optimise_prompt_gepa()
     # optimise_prompt_bootstrap()
     # optimise_prompt_miprov2()
-    # print(human_count)
-    # dspy.inspect_history(n=10)
+
     text_processor = dspy.Predict(AILanguageDetector)
-    # text_processor.save("base-prompt.json")
-    text_processor.load("base-prompt.json")
-    evaluate_prompt(text_processor)
-
-
-# On validation data set (908 examples)
-#2025/09/12 14:03:11 INFO dspy.evaluate.evaluate: Average Metric: 884.0 / 908 (97.4%) - Miprov2
-# 2025/09/12 14:33:14 INFO dspy.evaluate.evaluate: Average Metric: 512.0 / 908 (56.4%) - Base prompt
+    
+    text_processor.load("mipro-prompt-orig.json")
+    print(text_processor.dump_state())
+    evaluate_prompt(text_processor,full_dspy_dataset)
