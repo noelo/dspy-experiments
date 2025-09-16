@@ -49,7 +49,7 @@ def static_run():
     pod_processor = dspy.Predict(OpenshiftIssueService)
     result= pod_processor(log_message=pod_logs,repo_name="Red Hat ETX Repo")
     print(result)
-    # dspy.inspect_history(n=50)
+    dspy.inspect_history(n=50)
     # dspy   
     
     
