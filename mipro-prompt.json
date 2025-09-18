@@ -1,0 +1,47 @@
+{
+  "traces": [],
+  "train": [],
+  "demos": [
+    {
+      "augmented": true,
+      "input_text": "The state senator that is reading this should understand that in my favor keeping the Electoral College is the wise thing to do. It will avoid runoff elections and how it always has a process if something happens and that the process is fairhence Electoral College would be the best.\n\nTo start off, the Electoral College helps with elections be cause it avoids runoff elections. In other words it keeps us from running into problem where neither candidate gets the majority of the the votes cast. For example, in 1968 president Nixon and Clinton in 1992 each had 43 percent of the popular votes but because their electoral votes was 301 to 370 it does matter so this means it was a runoff election until the percentage of votes changed. The Electoral College soon produces a clear winner. This is just solving a problem where no candidate receives the majority of votes. Now there is only one con to the Electoral College and that is that it may turn off people from voting because they believe that their vote out of everybody who votes isnt enough to do a difference so they dont even vote. So voters in presidential elections are way better than just one vote deciding an election.\n\nFurthermore, the Electoral College is consisted of 538 electors. The candidate needs atleast 270 to be elected. If they have atleast 270 and there and they are not tied, but they have the same popular votes, also known as a plurality. The Electoral Colleges 538 electors will decide. This is 100 percent fair because those electors study this, they do this for their job, and they understand. They make up for the people who didn't vote. So just think, wouldnt you want 538 professional electors deciding whos president or 538 people who dont even want to vote and dont even know about the campaign to decide whos your president. All the lying about the Electoral College that it is an anachronism is false it is a success. This is common sense if you ask me.",
+      "result": 0
+    },
+    {
+      "augmented": true,
+      "input_text": "The world has become a plastic bag of pollution, suffocating its inhabitants and holding in all the problems in this world. The major, and simply solved, problem is automobiles. Citizens should reduce car usage to improve there lives and take advantages of the benefits that follow. The people of Germany, Paris, Columbia, and The United States has, at least, tasted the benefits of such a simple change.\n\nVauban, Germany has recreated itself to become a carfree community. Residents agree with and support the cause saying \" When i had a car i was always tense. I'm much happier this waydoc 1.\" The stressors caused by money problems and dangers from cars, make the people of the world stressed. In addition to the relaxing effect of this kind of community, this life style reduces the amount of greenhouse gas emission expelled from tailpipe that is \"choking citiesdoc 1.\" In this specially made community, cities are denser, with more public transportation and overall a cheaper way of life. The environmental Protection Agency agrees, this is a change for the better.\n\nParis, France has gone to the nessisary extent of a partial driving ban to clear the air from the cancerous smog on the city. After banning a majority of cars from the rode, \"Congestion was down 60 percent in the capital of France, after five days of intensifying smogdoc 2.\" Thats all it took, one day to make a difference, but most people of the world cannot fathom a day without their car. With the amount of people moving around this global beauty, smog covers the city, and yet nothing serious has been permanently done about it.\n\nbogota, Columbia has a special day every year: A carfree day created to promote the use of alternate transportation and reduce smog. Citizens and businessmen all support the cause, when one day made into \" A good opportunity to take away stress and lower pollutionDoc 3.\" Although one day isn't nearly long enough to undo the harm that cars have done to the world, but at least it raises awareness that can spread even quicker, than a thickening smog, throughout the world.\n\nThe United States has demonstrated the effects of their awareness of these problems. Evidence and researchers both notice and support that people are getting \" Fewer cars, Driving less, and getting fewer licensesdoc 4.\" The decline can be tied to not being able to afford a car, but evidence refutes that by saying that it is a more fundamental revalation. People are starting to become aware of the endless benefits of a carfree world, but are stuck in this world which is consumed by them.\n\nStuck in this automobilecentered world, people cannot see nor fathom the idea of no automobiles, and believe it to be impractical and undesirable. But if the world were to alter itself, to better accomidate this lifestyle, cities would represent a whole new meaning, \" Pedestrian, bicycle, private cars, comerical and public transportation traffic woven into a connected network to save time, conserve resources, lower emissions and improve safetydoc 4.\"With some changes, people will soon see the world in a new light. One city, state, nation, and world at a time will make the change.\n\nMy fellow citizens, join me, in this revolution to evolve this incompatent world.",
+      "result": 0
+    },
+    {
+      "augmented": true,
+      "input_text": "Generate a detailed summary of climate change mitigation in the context of the 21st century.",
+      "result": 1
+    },
+    {
+      "augmented": true,
+      "input_text": "Compose an in-depth exploration of space exploration missions in the context of the developing world.",
+      "result": 1
+    }
+  ],
+  "signature": {
+    "instructions": "Examine the provided input text to identify if it contains an explicit directive for creating structured writing tasks, such as an outline or a technical report. If the text clearly requests such structured content, return `Result: 1`. If the text is general in nature and does not specify a structured writing task, return `Result: 0`.",
+    "fields": [
+      {
+        "prefix": "Input Text:",
+        "description": "text to be evaluated"
+      },
+      {
+        "prefix": "Result:",
+        "description": "0 for human 1 for AI"
+      }
+    ]
+  },
+  "lm": null,
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}
